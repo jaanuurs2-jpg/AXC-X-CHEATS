@@ -666,14 +666,10 @@ aspect-ratio:16/9;
 <div id="qrModal" class="modal" onclick="closeQR()">
     <div class="modal-content" onclick="event.stopPropagation()">
         <span class="close-btn" onclick="closeQR()"><i class="fas fa-times"></i></span>
-        <h2>Scan to Buy</h2>
-        <img src="QR.PNG" alt="QR Code" class="qr-image">
-        <p>Scan this QR code to make a payment</p>
+        <h2>Get Your Key</h2>
+        <p>Join our Discord to get your key</p>
         <div class="modal-buttons">
-            <a href="QR.PNG" download="QR_.png" class="download-btn">
-                <i class="fas fa-download"></i> Download QR
-            </a>
-            <a href="https://discord.gg/ncv9rvnrkm" target="_blank" class="get-key-btn">
+            <a href="https://discord.gg/ncv9rvnrkm" target="_blank" class="get-key-btn" style="opacity: 1; animation: none;">
                 <i class="fab fa-discord"></i> Pay and Get Key
             </a>
         </div>
@@ -2254,6 +2250,25 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 </div>
 </section>
 
+<!-- QR Code Section -->
+<section id="qr-section" style="padding: 80px 24px;">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag tag-purple"><i class="fas fa-qrcode"></i> Scan to Buy</span>
+      <h2 class="section-title">Pay & Get Your Key</h2>
+      <p class="section-desc">Scan this QR code to make payment, then join Discord for your key.</p>
+    </div>
+    <div style="display: flex; justify-content: center;">
+      <img src="QR.png" alt="QR Code" style="max-width: 300px; width: 100%; border-radius: 15px; border: 2px solid rgba(255,255,255,0.2);">
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 30px;">
+      <a href="https://discord.gg/ncv9rvnrkm" target="_blank" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+        <i class="fab fa-discord"></i> Get Key
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section">
 <div class="container">
@@ -2582,27 +2597,10 @@ function showToast(msg) {
   setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
-// ===== QR CODE MODAL =====
+// ===== QR CODE SECTION =====
 function openQR() {
-  const modal = document.getElementById('qrModal');
-  const content = modal.querySelector('.modal-content');
-  const getKeyBtn = modal.querySelector('.get-key-btn');
-  const downloadBtn = modal.querySelector('.download-btn');
-  
-  // Reset animations
-  content.style.animation = 'none';
-  getKeyBtn.style.animation = 'none';
-  downloadBtn.style.animation = 'none';
-  
-  modal.style.display = 'flex';
-  
-  // Trigger reflow
-  content.offsetHeight;
-  
-  // Restart animations
-  content.style.animation = 'modalPopIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-  downloadBtn.style.animation = 'btnPopIn 0.5s ease-out 0s forwards';
-  getKeyBtn.style.animation = 'btnPopIn 0.5s ease-out 0.1s forwards';
+  const qrSection = document.getElementById('qr-section');
+  qrSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 function closeQR() {
