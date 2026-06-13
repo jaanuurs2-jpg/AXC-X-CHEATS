@@ -101,6 +101,30 @@ color:#fff;border:none;cursor:pointer;text-transform:uppercase;letter-spacing:1p
 transition:all 0.3s;text-decoration:none;
 }
 .nav-btn:hover{transform:scale(1.05);box-shadow:0 0 25px rgba(99,102,241,0.4)}
+/* ===== HAMBURGER ===== */
+.hamburger{
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+z-index:101;
+}
+.hamburger span{
+width:25px;
+height:3px;
+background:#fff;
+border-radius:2px;
+transition:all 0.3s;
+}
+.hamburger.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+}
+.hamburger.active span:nth-child(2){
+opacity:0;
+}
+.hamburger.active span:nth-child(3){
+transform:rotate(-45deg) translate(7px,-7px);
+}
 
 /* ===== HERO ===== */
 .hero{
@@ -465,7 +489,28 @@ transition:all 0.8s cubic-bezier(0.16,1,0.3,1);
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:768px){
-.nav-links{display:none}
+.hamburger{display:flex}
+.nav-links{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+right:0;
+background:rgba(10,10,15,0.98);
+backdrop-filter:blur(30px);
+flex-direction:column;
+padding:30px 20px;
+gap:20px;
+border-bottom:1px solid var(--border);
+}
+.nav-links.active{display:flex}
+.nav-links a{
+width:100%;
+text-align:center;
+color:#ffffff !important;
+font-size:16px !important;
+font-weight:600 !important;
+}
 .products-grid{grid-template-columns:1fr}
 .pricing-cards{grid-template-columns:repeat(2,1fr)}
 .hero-stats{gap:24px}
@@ -474,6 +519,15 @@ transition:all 0.8s cubic-bezier(0.16,1,0.3,1);
 }
 @media(max-width:480px){
 .pricing-cards{grid-template-columns:1fr}
+.modal-content{
+padding:30px 20px;
+}
+.modal-content h2{
+font-size:24px;
+}
+.modal-content p{
+font-size:14px;
+}
 }
 
 /* ===== TOAST ===== */
@@ -507,12 +561,15 @@ aspect-ratio:16/9;
     left:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.8);
+    background:rgba(0,0,0,0.9);
     z-index:10000;
     justify-content:center;
     align-items:center;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     animation:fadeIn 0.3s ease-out;
+}
+.modal.active{
+    display:flex;
 }
 .modal-content{
     background:linear-gradient(135deg, #1a1a2e, #16213e);
@@ -520,9 +577,12 @@ aspect-ratio:16/9;
     border-radius:20px;
     text-align:center;
     position:relative;
-    border:1px solid rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.15);
     box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     animation:modalPopIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    max-width:90%;
+    width:100%;
+    max-width:450px;
 }
 @keyframes fadeIn{
     from{opacity:0}
@@ -542,10 +602,11 @@ aspect-ratio:16/9;
     position:absolute;
     top:15px;
     right:20px;
-    font-size:24px;
+    font-size:28px;
     color:#fff;
     cursor:pointer;
     transition:0.3s;
+    z-index:10001;
 }
 .close-btn:hover{
     color:var(--accent);
@@ -561,9 +622,10 @@ aspect-ratio:16/9;
     color:#fff;
     font-family:'Bricolage Grotesque', sans-serif;
     margin-bottom:10px;
+    font-size:28px;
 }
 .modal-content p{
-    color:var(--text2);
+    color:#e2e8f0;
     font-size:16px;
 }
 .get-key-btn{
@@ -599,7 +661,11 @@ aspect-ratio:16/9;
 .download-btn{
     background:linear-gradient(135deg, var(--cyan), var(--primary));
     animation-delay:0s;
-    opacity:0;
+    opacity:1;
+}
+.download-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 35px rgba(6,182,212,0.4);
 }
 .get-key-btn{
     background:rgba(255,255,255,0.05);
@@ -650,7 +716,12 @@ aspect-ratio:16/9;
 <img src="ICON.png" alt="AXC Logo" class="logo-img">
 <span class="logo-text">AXC X CHEATS</span>
 </div>
-<div class="nav-links">
+<div class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="nav-links" id="navLinks">
 <a href="#products">Products</a>
 <a href="#panels">Panels</a>
 <a href="#optimizer">Optimizer</a>
@@ -667,8 +738,12 @@ aspect-ratio:16/9;
     <div class="modal-content" onclick="event.stopPropagation()">
         <span class="close-btn" onclick="closeQR()"><i class="fas fa-times"></i></span>
         <h2>Get Your Key</h2>
-        <p>Join our Discord to get your key</p>
+        <p>Scan this QR code to make payment, then join Discord for your key.</p>
+        <img src="QR.png" alt="QR Code" class="qr-image">
         <div class="modal-buttons">
+            <a href="QR.png" download class="download-btn">
+                <i class="fas fa-download"></i> Download QR
+            </a>
             <a href="https://discord.gg/ncv9rvnrkm" target="_blank" class="get-key-btn" style="opacity: 1; animation: none;">
                 <i class="fab fa-discord"></i> Pay and Get Key
             </a>
@@ -2261,7 +2336,10 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
     <div style="display: flex; justify-content: center;">
       <img src="QR.png" alt="QR Code" style="max-width: 300px; width: 100%; border-radius: 15px; border: 2px solid rgba(255,255,255,0.2);">
     </div>
-    <div style="display: flex; justify-content: center; margin-top: 30px;">
+    <div style="display: flex; justify-content: center; margin-top: 30px; gap: 15px; flex-wrap: wrap;">
+      <a href="QR.png" download class="btn-secondary" style="display: inline-flex; align-items: center; gap: 8px;">
+        <i class="fas fa-download"></i> Download QR
+      </a>
       <a href="https://discord.gg/ncv9rvnrkm" target="_blank" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
         <i class="fab fa-discord"></i> Get Key
       </a>
@@ -2299,6 +2377,23 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 </footer>
 
 <script>
+// ===== HAMBURGER MENU TOGGLE =====
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+  });
+});
+
 // ===== ATTRACTIVE PARTICLE SYSTEM =====
 class AttractiveParticle {
   constructor() {
@@ -2597,14 +2692,17 @@ function showToast(msg) {
   setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
-// ===== QR CODE SECTION =====
+// ===== QR CODE MODAL =====
 function openQR() {
-  const qrSection = document.getElementById('qr-section');
-  qrSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const qrModal = document.getElementById('qrModal');
+  qrModal.classList.add('active');
+  qrModal.style.display = 'flex';
 }
 
 function closeQR() {
-  document.getElementById('qrModal').style.display = 'none';
+  const qrModal = document.getElementById('qrModal');
+  qrModal.classList.remove('active');
+  qrModal.style.display = 'none';
 }
 
 // ===== BUY BUTTON CLICK FEEDBACK =====
