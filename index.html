@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AXC X CHEATS - STORE</title>
+<title>AXC X CHEATS - FF STORE</title>
 <link rel="icon" type="image/png" href="LOGO.jpeg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -41,6 +41,11 @@ background:radial-gradient(ellipse,var(--primary-light),transparent 70%);
 filter:blur(2px);border-radius:50%;
 }
 
+/* ===== HIDE DEFAULT CURSOR ===== */
+* {
+    cursor: none !important;
+}
+
 /* ===== CURSOR GLOW ===== */
 #cursor-glow{
 position:fixed;width:400px;height:400px;
@@ -48,6 +53,70 @@ background:radial-gradient(circle,rgba(99,102,241,0.08),rgba(6,182,212,0.04),tra
 pointer-events:none;z-index:1;transform:translate(-50%,-50%);
 transition:transform 0.3s cubic-bezier(0.23,1,0.32,1);
 }
+
+/* ===== CUSTOM ROUND LIGHT CURSOR ===== */
+#custom-cursor {
+    position: fixed;
+    width: 28px;
+    height: 28px;
+    border: 2px solid rgba(99, 102, 241, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: all 0.15s ease-out;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4), 0 0 30px rgba(168, 85, 247, 0.2), inset 0 0 10px rgba(99, 102, 241, 0.3);
+    animation: cursorPulse 2s ease-in-out infinite;
+}
+
+#custom-cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #ffffff 0%, #6366f1 40%, #a855f7 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 25px rgba(99, 102, 241, 0.6), 0 0 40px rgba(168, 85, 247, 0.4);
+    animation: dotPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes cursorPulse {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(99, 102, 241, 0.4), 0 0 30px rgba(168, 85, 247, 0.2), inset 0 0 10px rgba(99, 102, 241, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(99, 102, 241, 0.6), 0 0 50px rgba(168, 85, 247, 0.4), inset 0 0 15px rgba(99, 102, 241, 0.5);
+    }
+}
+
+@keyframes dotPulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.8), 0 0 25px rgba(99, 102, 241, 0.6), 0 0 40px rgba(168, 85, 247, 0.4);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        box-shadow: 0 0 18px rgba(255, 255, 255, 1), 0 0 35px rgba(99, 102, 241, 0.8), 0 0 55px rgba(168, 85, 247, 0.6);
+    }
+}
+
+/* Cursor on hover effect */
+#custom-cursor.hover {
+    width: 50px;
+    height: 50px;
+    border-color: rgba(6, 182, 212, 0.8);
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.6), 0 0 40px rgba(99, 102, 241, 0.4), inset 0 0 15px rgba(6, 182, 212, 0.4);
+}
+
+#custom-cursor-dot.hover {
+    background: radial-gradient(circle, #ffffff 0%, #06b6d4 40%, #6366f1 100%);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 1), 0 0 30px rgba(6, 182, 212, 0.8), 0 0 50px rgba(99, 102, 241, 0.6);
+}
+
 
 /* ===== NAV ===== */
 nav{
@@ -550,8 +619,79 @@ aspect-ratio:16/9;
 .video-wrap iframe{width:100%;height:100%;border:none}
 
 /* ===== PANEL SWITCHER ===== */
-.panel-display{display:none}
-.panel-display.active{display:block}
+.panel-display{
+    display:none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease-out;
+}
+.panel-display.active{
+    display:block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideInUp 0.5s ease-out forwards;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== PANEL CONTAINER ===== */
+.panel-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 900px) {
+    .panel-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== PANEL OVERVIEW IMAGE ===== */
+.panel-overview {
+    width: 100%;
+    max-height: 450px;
+    border-radius: 20px;
+    border: 2px solid var(--border);
+    object-fit: contain;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    background: rgba(0,0,0,0.2);
+}
+
+.panel-overview:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 50px rgba(99, 102, 241, 0.3);
+    border-color: var(--primary-light);
+}
+
+/* ===== FEATURES WRAPPER ===== */
+.features-wrapper {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(168, 85, 247, 0.03));
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid var(--border);
+}
+
+.features-wrapper h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, var(--cyan), var(--primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
 
 /* ===== QR CODE MODAL ===== */
 .modal{
@@ -705,6 +845,10 @@ aspect-ratio:16/9;
 
 <!-- Cursor Glow -->
 <div id="cursor-glow"></div>
+
+<!-- Custom Cursor -->
+<div id="custom-cursor"></div>
+<div id="custom-cursor-dot"></div>
 
 <!-- Toast -->
 <div class="toast" id="toast"></div>
@@ -1084,7 +1228,7 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <li><i class="fas fa-rocket fi-purple"></i> Lag Free Experience</li>
 </ul>
 <div class="price-row">
-<div class="price price-purple">₹599 <small>only</small></div>
+<div class="price price-purple">₹1999 <small>/ Only</small></div>
 <a href="javascript:void(0)" onclick="openQR()" class="buy-btn buy-purple"><i class="fas fa-cart-shopping"></i> Buy Now</a>
 </div>
 </div>
@@ -1220,7 +1364,11 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 
 <!-- Basic Panel -->
 <div class="panel-display active" id="panel-basic">
-<div class="optimizer-grid reveal" style="margin-bottom: 30px;">
+<div class="panel-container">
+    <img src="BASIC.png" alt="Basic Panel Overview" class="panel-overview reveal">
+    <div class="features-wrapper">
+        <h3>Basic Panel Features</h3>
+        <div class="optimizer-grid reveal" style="margin-bottom: 0; gap: 12px;">
 <div class="optimizer-item">
 <i class="fas fa-brain" style="color: var(--primary-light);"></i>
 <h4>Aimbot AI</h4>
@@ -1237,6 +1385,8 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <i class="fas fa-sync-alt" style="color: var(--cyan);"></i>
 <h4>Regular Updates</h4>
 </div>
+</div>
+    </div>
 </div>
 <div class="pricing-cards reveal">
 <div class="pricing-card">
@@ -1269,7 +1419,11 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 
 <!-- Premium Panel -->
 <div class="panel-display" id="panel-premium">
-<div class="optimizer-grid reveal" style="margin-bottom: 30px;">
+<div class="panel-container">
+    <img src="PREMIUM.png" alt="Premium Panel Overview" class="panel-overview reveal">
+    <div class="features-wrapper">
+        <h3>Premium Panel Features</h3>
+        <div class="optimizer-grid reveal" style="margin-bottom: 0; gap: 12px;">
 <div class="optimizer-item">
 <i class="fas fa-crosshairs" style="color: var(--purple);"></i>
 <h4>Aimbot + Aimbot AI</h4>
@@ -1290,6 +1444,8 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <i class="fas fa-shield-halved" style="color: var(--green);"></i>
 <h4>Undetected & Smooth</h4>
 </div>
+</div>
+    </div>
 </div>
 <div class="pricing-cards reveal">
 <div class="pricing-card">
@@ -1322,7 +1478,11 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 
 <!-- Brutal Panel -->
 <div class="panel-display" id="panel-brutal">
-<div class="optimizer-grid reveal" style="margin-bottom: 30px;">
+<div class="panel-container">
+    <img src="BRUTAL.png" alt="Brutal Panel Overview" class="panel-overview reveal">
+    <div class="features-wrapper">
+        <h3>Brutal Panel Features</h3>
+        <div class="optimizer-grid reveal" style="margin-bottom: 0; gap: 12px;">
 <div class="optimizer-item">
 <i class="fas fa-crosshairs" style="color: var(--amber);"></i>
 <h4>Aimbot Head/Neck/Drag/AI/FOV</h4>
@@ -1351,6 +1511,8 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <i class="fas fa-rotate" style="color: var(--amber);"></i>
 <h4>Guest Reset</h4>
 </div>
+</div>
+    </div>
 </div>
 <div class="pricing-cards reveal">
 <div class="pricing-card">
@@ -1383,7 +1545,11 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 
 <!-- Aimbot Visible Panel -->
 <div class="panel-display" id="panel-visible">
-<div class="optimizer-grid reveal" style="margin-bottom: 30px;">
+<div class="panel-container">
+    <img src="VISIBLE.png" alt="Visible Panel Overview" class="panel-overview reveal">
+    <div class="features-wrapper">
+        <h3>Aimbot Visible Panel Features</h3>
+        <div class="optimizer-grid reveal" style="margin-bottom: 0; gap: 12px;">
 <div class="optimizer-item">
 <i class="fas fa-crosshairs" style="color: var(--primary-light);"></i>
 <h4>Aimbot Visible + Rage</h4>
@@ -1412,6 +1578,8 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <i class="fas fa-crosshairs" style="color: var(--purple);"></i>
 <h4>Crosshair + ESP Info</h4>
 </div>
+</div>
+    </div>
 </div>
 <div class="pricing-cards reveal">
 <div class="pricing-card">
@@ -1444,7 +1612,11 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 
 <!-- Projects Panel -->
 <div class="panel-display" id="panel-projects">
-<div class="optimizer-grid reveal" style="margin-bottom: 30px;">
+<div class="panel-container">
+    <img src="PREMIUM.png" alt="Projects Panel Overview" class="panel-overview reveal">
+    <div class="features-wrapper">
+        <h3>Projects Panel Features</h3>
+        <div class="optimizer-grid reveal" style="margin-bottom: 0; gap: 12px;">
 <div class="optimizer-item">
 <i class="fas fa-code" style="color: var(--primary-light);"></i>
 <h4>Full Source Code</h4>
@@ -1461,6 +1633,8 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <i class="fas fa-sync-alt" style="color: var(--green);"></i>
 <h4>Regular Updates</h4>
 </div>
+</div>
+    </div>
 </div>
 <div class="pricing-cards reveal">
 <div class="pricing-card">
@@ -1493,7 +1667,11 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 
 <!-- Internal Panel -->
 <div class="panel-display" id="panel-internal">
-<div class="optimizer-grid reveal" style="margin-bottom: 30px;">
+<div class="panel-container">
+    <img src="INTERNAL.png" alt="Internal Panel Overview" class="panel-overview reveal">
+    <div class="features-wrapper">
+        <h3>Internal Panel Features</h3>
+        <div class="optimizer-grid reveal" style="margin-bottom: 0; gap: 12px;">
 <div class="optimizer-item">
 <i class="fas fa-crosshairs" style="color: var(--primary-light);"></i>
 <h4>AIMBOT VISIBLE</h4>
@@ -1527,6 +1705,8 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <h4>EXTRA ESP FEATURES</h4>
 </div>
 </div>
+    </div>
+</div>
 <div class="pricing-cards reveal">
 <div class="pricing-card">
 <div class="pricing-duration">1 Day</div>
@@ -1558,7 +1738,11 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 
 <!-- Silent Aim - Main ID Panel -->
 <div class="panel-display" id="panel-silentaim">
-<div class="optimizer-grid reveal" style="margin-bottom: 30px;">
+<div class="panel-container">
+    <img src="SILENT AIM MAIN ID.png" alt="Silent Aim Main ID Overview" class="panel-overview reveal">
+    <div class="features-wrapper">
+        <h3>Silent Aim - Main ID Features</h3>
+        <div class="optimizer-grid reveal" style="margin-bottom: 0; gap: 12px;">
 <div class="optimizer-item">
 <i class="fas fa-robot" style="color: var(--primary-light);"></i>
 <h4>AIMBOT AI</h4>
@@ -1624,6 +1808,8 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <h4>FAST REVIVE</h4>
 </div>
 </div>
+    </div>
+</div>
 <div class="pricing-cards reveal">
 <div class="pricing-card">
 <div class="pricing-duration">1 Day</div>
@@ -1655,7 +1841,11 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 
 <!-- UID Bypass Panel -->
 <div class="panel-display" id="panel-uidbypass">
-<div class="optimizer-grid reveal" style="margin-bottom: 30px;">
+<div class="panel-container">
+    <img src="UID BYPASS.png" alt="UID Bypass Overview" class="panel-overview reveal">
+    <div class="features-wrapper">
+        <h3>UID Bypass Features</h3>
+        <div class="optimizer-grid reveal" style="margin-bottom: 0; gap: 12px;">
 <div class="optimizer-item">
 <i class="fas fa-sparkles" style="color: var(--primary-light);"></i>
 <h4>Seamless bypass support</h4>
@@ -1672,6 +1862,8 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <i class="fas fa-rocket" style="color: var(--purple);"></i>
 <h4>Enhanced compatibility with panels</h4>
 </div>
+</div>
+    </div>
 </div>
 <div class="pricing-cards reveal">
 <div class="pricing-card">
@@ -1704,7 +1896,11 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 
 <!-- Paid Push Panel -->
 <div class="panel-display" id="panel-paidpush">
-<div class="optimizer-grid reveal" style="margin-bottom: 30px;">
+<div class="panel-container">
+    <img src="PAID PUSH.png" alt="Paid Push Overview" class="panel-overview reveal">
+    <div class="features-wrapper">
+        <h3>Paid Push Features</h3>
+        <div class="optimizer-grid reveal" style="margin-bottom: 0; gap: 12px;">
 <div class="optimizer-item">
 <i class="fas fa-rocket" style="color: var(--amber);"></i>
 <h4>Instant Rank Boost</h4>
@@ -1721,6 +1917,8 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <i class="fas fa-headset" style="color: var(--cyan);"></i>
 <h4>24/7 Support</h4>
 </div>
+</div>
+    </div>
 </div>
 <div class="pricing-cards reveal">
 <div class="pricing-card">
@@ -1753,7 +1951,11 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 
 <!-- Mobile Panel Non Root Panel -->
 <div class="panel-display" id="panel-mobilepanel">
-<div class="optimizer-grid reveal" style="margin-bottom: 30px;">
+<div class="panel-container">
+    <img src="MOBILE PANEL NON ROOT.png" alt="Mobile Panel Overview" class="panel-overview reveal">
+    <div class="features-wrapper">
+        <h3>Mobile Panel Non Root Features</h3>
+        <div class="optimizer-grid reveal" style="margin-bottom: 0; gap: 12px;">
 <div class="optimizer-item">
 <i class="fas fa-bolt" style="color: var(--purple);"></i>
 <h4>70% AIMBOT</h4>
@@ -1770,6 +1972,8 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <i class="fas fa-rocket" style="color: var(--green);"></i>
 <h4>Lag Free Experience</h4>
 </div>
+</div>
+    </div>
 </div>
 <div class="pricing-cards reveal">
 <div class="pricing-card">
@@ -1802,7 +2006,11 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 
 <!-- Aim Silent Cover Panel -->
 <div class="panel-display" id="panel-aimsilent">
-<div class="optimizer-grid reveal" style="margin-bottom: 30px;">
+<div class="panel-container">
+    <img src="SILENT AIM COVER.png" alt="Silent Aim Cover Overview" class="panel-overview reveal">
+    <div class="features-wrapper">
+        <h3>Aim Silent Cover Features</h3>
+        <div class="optimizer-grid reveal" style="margin-bottom: 0; gap: 12px;">
 <div class="optimizer-item">
 <i class="fas fa-eye-slash" style="color: var(--primary-light);"></i>
 <h4>SILENT AIM</h4>
@@ -1868,6 +2076,8 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <h4>MAP TELEPORT</h4>
 </div>
 </div>
+    </div>
+</div>
 <div class="pricing-cards reveal">
 <div class="pricing-card">
 <div class="pricing-duration">1 Day</div>
@@ -1899,7 +2109,11 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 
 <!-- Aimkill Panel -->
 <div class="panel-display" id="panel-aimkill">
-<div class="optimizer-grid reveal" style="margin-bottom: 30px;">
+<div class="panel-container">
+    <img src="AIMKILL.png" alt="Aimkill Overview" class="panel-overview reveal">
+    <div class="features-wrapper">
+        <h3>Aimkill Features</h3>
+        <div class="optimizer-grid reveal" style="margin-bottom: 0; gap: 12px;">
 <div class="optimizer-item">
 <i class="fas fa-check-circle" style="color: var(--cyan);"></i>
 <h4>AIMKILL</h4>
@@ -1933,6 +2147,8 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <h4>FLY HACK</h4>
 </div>
 </div>
+    </div>
+</div>
 <div class="pricing-cards reveal">
 <div class="pricing-card">
 <div class="pricing-duration">1 Day</div>
@@ -1964,7 +2180,11 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 
 <!-- Streamer Panel -->
 <div class="panel-display" id="panel-streamer">
-<div class="optimizer-grid reveal" style="margin-bottom: 30px;">
+<div class="panel-container">
+    <img src="STREAMER.png" alt="Streamer Panel Overview" class="panel-overview reveal">
+    <div class="features-wrapper">
+        <h3>Streamer Panel Features</h3>
+        <div class="optimizer-grid reveal" style="margin-bottom: 0; gap: 12px;">
 <div class="optimizer-item">
 <i class="fas fa-crosshairs" style="color: var(--primary-light);"></i>
 <h4>Aimbot Visible</h4>
@@ -2006,6 +2226,8 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <h4>Full Browser Control</h4>
 </div>
 </div>
+    </div>
+</div>
 <div class="pricing-cards reveal">
 <div class="pricing-card">
 <div class="pricing-duration">1 Day</div>
@@ -2037,7 +2259,11 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 
 <!-- R4T Android Panel -->
 <div class="panel-display" id="panel-r4tandroid">
-<div class="optimizer-grid reveal" style="margin-bottom: 30px;">
+<div class="panel-container">
+    <img src="R4T PANEL BOT.png" alt="R4T Android Panel Overview" class="panel-overview reveal">
+    <div class="features-wrapper">
+        <h3>R4T Android Panel Features</h3>
+        <div class="optimizer-grid reveal" style="margin-bottom: 0; gap: 12px;">
 <div class="optimizer-item">
 <i class="fas fa-eye" style="color: var(--purple);"></i>
 <h4>Real-Time Device Monitoring</h4>
@@ -2058,6 +2284,8 @@ The most powerful & undetected gaming tools. From emote hacks to full ESP panels
 <i class="fas fa-th-large" style="color: var(--amber);"></i>
 <h4>Modern Dashboard Design</h4>
 </div>
+</div>
+    </div>
 </div>
 <div class="pricing-cards reveal">
 <div class="pricing-card">
@@ -2599,7 +2827,7 @@ function animateClickParticles() {
 animateClickParticles();
 
 document.addEventListener('click', (e) => {
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < 10; i++) {
     clickParticles.push(new AttractiveClickParticle(e.clientX, e.clientY));
   }
 });
@@ -2613,12 +2841,53 @@ window.addEventListener('scroll', () => {
   scrollLine.style.height = scrollPercent + 'vh';
 });
 
-// ===== CURSOR GLOW =====
+// ===== CURSOR GLOW + CUSTOM CURSOR =====
 const cursorGlow = document.getElementById('cursor-glow');
+const customCursor = document.getElementById('custom-cursor');
+const customCursorDot = document.getElementById('custom-cursor-dot');
+
+// Smooth following variables
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+let cursorX = mouseX;
+let cursorY = mouseY;
+
 document.addEventListener('mousemove', (e) => {
-  cursorGlow.style.left = e.clientX + 'px';
-  cursorGlow.style.top = e.clientY + 'px';
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  // Update dot immediately
+  cursorGlow.style.left = mouseX + 'px';
+  cursorGlow.style.top = mouseY + 'px';
+  customCursorDot.style.left = mouseX + 'px';
+  customCursorDot.style.top = mouseY + 'px';
 });
+
+// Smooth animation loop
+function animateCursor() {
+  // Smoothly interpolate cursor position
+  cursorX += (mouseX - cursorX) * 0.15;
+  cursorY += (mouseY - cursorY) * 0.15;
+  
+  customCursor.style.left = cursorX + 'px';
+  customCursor.style.top = cursorY + 'px';
+  
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+// Hover effects for cursor
+const hoverElements = document.querySelectorAll('a, button, .pricing-card, .hamburger, .pricing-tab');
+hoverElements.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    customCursor.classList.add('hover');
+    customCursorDot.classList.add('hover');
+  });
+  el.addEventListener('mouseleave', () => {
+    customCursor.classList.remove('hover');
+    customCursorDot.classList.remove('hover');
+  });
+});
+
 
 // ===== REVEAL ON SCROLL =====
 const reveals = document.querySelectorAll('.reveal');
