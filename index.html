@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AXC X CHEATS — FF STORE</title>
     <link rel="icon" type="image/png" href="LOGO.jpeg" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
         /* ===== RESET & BASE ===== */
@@ -14,6 +17,7 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         :root {
             --bg: #05080f;
             --bg2: #0a0f1f;
@@ -35,9 +39,11 @@
             --font-body: 'Inter', sans-serif;
             --shadow-glow: 0 0 60px rgba(79, 140, 255, 0.15);
         }
+
         html {
             scroll-behavior: smooth;
         }
+
         body {
             font-family: var(--font-body);
             background: var(--bg);
@@ -46,6 +52,7 @@
             cursor: none;
             line-height: 1.7;
         }
+
         * {
             cursor: none !important;
         }
@@ -53,9 +60,11 @@
         ::-webkit-scrollbar {
             width: 6px;
         }
+
         ::-webkit-scrollbar-track {
             background: var(--bg);
         }
+
         ::-webkit-scrollbar-thumb {
             background: var(--primary);
             border-radius: 10px;
@@ -86,6 +95,7 @@
             border-radius: 0 2px 2px 0;
             transition: height 0.1s linear;
         }
+
         #scroll-line::after {
             content: '';
             position: absolute;
@@ -115,6 +125,7 @@
             backdrop-filter: blur(4px);
             mix-blend-mode: difference;
         }
+
         #custom-cursor-dot {
             position: fixed;
             width: 8px;
@@ -127,24 +138,31 @@
             box-shadow: 0 0 25px #fff, 0 0 50px var(--accent);
             animation: dotPulse 1.8s ease-in-out infinite;
         }
+
         @keyframes cursorPulse {
+
             0%,
             100% {
                 box-shadow: 0 0 30px rgba(255, 255, 255, 0.3), 0 0 60px rgba(0, 212, 255, 0.2);
             }
+
             50% {
                 box-shadow: 0 0 50px rgba(255, 255, 255, 0.7), 0 0 90px rgba(0, 212, 255, 0.5);
             }
         }
+
         @keyframes dotPulse {
+
             0%,
             100% {
                 transform: translate(-50%, -50%) scale(1);
             }
+
             50% {
                 transform: translate(-50%, -50%) scale(1.6);
             }
         }
+
         #custom-cursor.hover {
             width: 70px;
             height: 70px;
@@ -153,6 +171,7 @@
             box-shadow: 0 0 50px #fff, 0 0 100px var(--accent);
             mix-blend-mode: normal;
         }
+
         #custom-cursor-dot.hover {
             background: radial-gradient(circle, #fff, var(--accent), var(--primary));
             box-shadow: 0 0 35px #fff, 0 0 70px var(--accent);
@@ -184,6 +203,7 @@
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             transform-style: preserve-3d;
         }
+
         nav.scrolled {
             background: rgba(5, 8, 15, 0.85);
             backdrop-filter: blur(30px);
@@ -191,6 +211,7 @@
             box-shadow: 0 4px 60px rgba(0, 0, 0, 0.6);
             border-bottom-color: rgba(255, 255, 255, 0.08);
         }
+
         .nav-inner {
             max-width: 1280px;
             margin: 0 auto;
@@ -198,21 +219,25 @@
             align-items: center;
             justify-content: space-between;
         }
+
         .logo {
             display: flex;
             align-items: center;
             gap: 12px;
             position: relative;
         }
+
         .logo-img {
             height: 40px;
             object-fit: contain;
             filter: drop-shadow(0 0 20px rgba(79, 140, 255, 0.4));
             transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .logo-img:hover {
             transform: rotate(-8deg) scale(1.05);
         }
+
         .logo-text {
             font-family: var(--font-heading);
             font-size: 20px;
@@ -223,24 +248,30 @@
             filter: drop-shadow(0 0 30px rgba(79, 140, 255, 0.2));
             letter-spacing: -0.5px;
         }
+
         .logo-text span {
             display: inline-block;
             animation: logoFloat 3s ease-in-out infinite;
         }
+
         @keyframes logoFloat {
+
             0%,
             100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-2px);
             }
         }
+
         .nav-links {
             display: flex;
             gap: 28px;
             align-items: center;
         }
+
         .nav-links a {
             color: var(--text2);
             text-decoration: none;
@@ -252,6 +283,7 @@
             position: relative;
             padding: 4px 0;
         }
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -263,19 +295,24 @@
             transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             border-radius: 2px;
         }
+
         .nav-links a:hover {
             color: #fff;
             text-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
         }
+
         .nav-links a:hover::after {
             width: 100%;
         }
+
         .nav-links a.active {
             color: #fff;
         }
+
         .nav-links a.active::after {
             width: 100%;
         }
+
         .nav-btn {
             padding: 10px 24px;
             border-radius: 12px;
@@ -294,6 +331,7 @@
             align-items: center;
             gap: 8px;
         }
+
         .nav-btn::before {
             content: '';
             position: absolute;
@@ -302,13 +340,16 @@
             opacity: 0;
             transition: opacity 0.4s;
         }
+
         .nav-btn:hover::before {
             opacity: 1;
         }
+
         .nav-btn:hover {
             transform: scale(1.05) translateZ(12px);
             box-shadow: 0 0 60px rgba(79, 140, 255, 0.5), 0 0 120px rgba(0, 212, 255, 0.3);
         }
+
         .nav-btn .shine {
             position: absolute;
             top: -50%;
@@ -319,17 +360,21 @@
             transform: rotate(30deg) translateX(-100%);
             transition: transform 0.6s;
         }
+
         .nav-btn:hover .shine {
             transform: rotate(30deg) translateX(100%);
         }
+
         .nav-btn i {
             position: relative;
             z-index: 1;
         }
+
         .nav-btn span {
             position: relative;
             z-index: 1;
         }
+
         .hamburger {
             display: none;
             flex-direction: column;
@@ -338,6 +383,7 @@
             z-index: 101;
             padding: 4px;
         }
+
         .hamburger span {
             width: 26px;
             height: 2px;
@@ -346,12 +392,15 @@
             transition: all 0.3s;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         }
+
         .hamburger.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
         }
+
         .hamburger.active span:nth-child(2) {
             opacity: 0;
         }
+
         .hamburger.active span:nth-child(3) {
             transform: rotate(-45deg) translate(7px, -7px);
         }
@@ -368,6 +417,7 @@
             perspective: 1200px;
             overflow: hidden;
         }
+
         .hero-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -376,10 +426,12 @@
             width: 100%;
             align-items: center;
         }
+
         .hero-left {
             position: relative;
             z-index: 2;
         }
+
         .hero-right {
             position: relative;
             z-index: 2;
@@ -387,6 +439,7 @@
             justify-content: center;
             align-items: center;
         }
+
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -403,6 +456,7 @@
             box-shadow: 0 0 40px rgba(79, 140, 255, 0.05);
             animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
+
         .hero-badge .dot {
             width: 8px;
             height: 8px;
@@ -411,15 +465,19 @@
             box-shadow: 0 0 20px var(--accent);
             animation: blink 2s infinite;
         }
+
         @keyframes blink {
+
             0%,
             100% {
                 opacity: 1;
             }
+
             50% {
                 opacity: 0.3;
             }
         }
+
         .hero h1 {
             font-family: var(--font-heading);
             font-size: clamp(48px, 7vw, 80px);
@@ -430,6 +488,7 @@
             animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
             opacity: 0;
         }
+
         .hero h1 .gradient {
             background: var(--gradient);
             -webkit-background-clip: text;
@@ -438,17 +497,21 @@
             animation: gradientShift 5s ease infinite;
             filter: drop-shadow(0 0 40px rgba(79, 140, 255, 0.2));
         }
+
         @keyframes gradientShift {
             0% {
                 background-position: 0% 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             100% {
                 background-position: 0% 50%;
             }
         }
+
         .hero p {
             font-size: 18px;
             color: var(--text2);
@@ -458,6 +521,7 @@
             opacity: 0;
             line-height: 1.8;
         }
+
         .hero-btns {
             display: flex;
             gap: 14px;
@@ -465,6 +529,7 @@
             animation: fadeInUp 0.8s 0.3s forwards;
             opacity: 0;
         }
+
         .btn-primary {
             padding: 16px 36px;
             border-radius: 14px;
@@ -483,6 +548,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .btn-primary::before {
             content: '';
             position: absolute;
@@ -491,13 +557,16 @@
             opacity: 0;
             transition: opacity 0.4s;
         }
+
         .btn-primary:hover::before {
             opacity: 1;
         }
+
         .btn-primary:hover {
             transform: translateY(-4px) scale(1.03) translateZ(12px);
             box-shadow: 0 0 60px rgba(79, 140, 255, 0.5), 0 0 120px rgba(0, 212, 255, 0.3);
         }
+
         .btn-primary .shine {
             position: absolute;
             top: -50%;
@@ -508,14 +577,17 @@
             transform: rotate(30deg) translateX(-100%);
             transition: transform 0.6s;
         }
+
         .btn-primary:hover .shine {
             transform: rotate(30deg) translateX(100%);
         }
+
         .btn-primary i,
         .btn-primary span {
             position: relative;
             z-index: 1;
         }
+
         .btn-secondary {
             padding: 16px 36px;
             border-radius: 14px;
@@ -531,12 +603,14 @@
             align-items: center;
             gap: 10px;
         }
+
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.08);
             border-color: rgba(255, 255, 255, 0.2);
             box-shadow: 0 0 50px rgba(255, 255, 255, 0.05);
             transform: translateY(-4px);
         }
+
         .hero-stats {
             display: flex;
             gap: 48px;
@@ -544,9 +618,11 @@
             animation: fadeInUp 0.8s 0.4s forwards;
             opacity: 0;
         }
+
         .stat {
             text-align: center;
         }
+
         .stat-num {
             font-family: var(--font-heading);
             font-size: 32px;
@@ -555,6 +631,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .stat-label {
             font-size: 11px;
             color: var(--text3);
@@ -562,6 +639,7 @@
             letter-spacing: 2px;
             margin-top: 4px;
         }
+
         .hero-trust {
             display: flex;
             gap: 20px;
@@ -570,6 +648,7 @@
             animation: fadeInUp 0.8s 0.5s forwards;
             opacity: 0;
         }
+
         .trust-badge {
             display: inline-flex;
             align-items: center;
@@ -582,9 +661,11 @@
             color: var(--text2);
             font-weight: 500;
         }
+
         .trust-badge i {
             color: var(--accent);
         }
+
         .trust-badge .verified {
             color: #10b981;
         }
@@ -599,6 +680,7 @@
             align-items: center;
             justify-content: center;
         }
+
         .hero-showcase canvas {
             width: 100% !important;
             height: 100% !important;
@@ -611,6 +693,7 @@
                 opacity: 0;
                 transform: translateY(40px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -623,14 +706,17 @@
             position: relative;
             z-index: 1;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
+
         .section-header {
             text-align: center;
             margin-bottom: 64px;
         }
+
         .section-tag {
             display: inline-block;
             padding: 6px 18px;
@@ -644,6 +730,7 @@
             border: 1px solid rgba(79, 140, 255, 0.12);
             margin-bottom: 16px;
         }
+
         .section-title {
             font-family: var(--font-heading);
             font-size: clamp(32px, 5vw, 48px);
@@ -652,11 +739,13 @@
             color: #fff;
             line-height: 1.1;
         }
+
         .section-title .highlight {
             background: var(--gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .section-desc {
             font-size: 16px;
             color: var(--text2);
@@ -671,6 +760,7 @@
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 28px;
         }
+
         .product-card {
             background: var(--glass);
             backdrop-filter: blur(24px);
@@ -684,6 +774,7 @@
             overflow: hidden;
             will-change: transform;
         }
+
         .product-card::before {
             content: '';
             position: absolute;
@@ -697,9 +788,11 @@
             opacity: 0;
             transition: opacity 0.6s;
         }
+
         .product-card:hover::before {
             opacity: 1;
         }
+
         .product-card .border-glow {
             position: absolute;
             inset: -2px;
@@ -710,9 +803,11 @@
             filter: blur(20px);
             z-index: -1;
         }
+
         .product-card:hover .border-glow {
             opacity: 0.6;
         }
+
         .product-card .spotlight {
             position: absolute;
             width: 200%;
@@ -725,14 +820,17 @@
             transition: opacity 0.6s;
             transform: translate(var(--mx, 0), var(--my, 0));
         }
+
         .product-card:hover .spotlight {
             opacity: 1;
         }
+
         .product-card:hover {
             transform: translateY(-12px) rotateX(2deg) rotateY(2deg);
             box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), 0 0 60px rgba(79, 140, 255, 0.06);
             border-color: rgba(255, 255, 255, 0.12);
         }
+
         .card-glow {
             position: absolute;
             width: 300px;
@@ -743,9 +841,11 @@
             transition: opacity 0.6s;
             pointer-events: none;
         }
+
         .product-card:hover .card-glow {
             opacity: 0.15;
         }
+
         .card-icon {
             width: 52px;
             height: 52px;
@@ -760,11 +860,13 @@
             border: 1px solid rgba(79, 140, 255, 0.1);
             transition: all 0.4s;
         }
+
         .product-card:hover .card-icon {
             background: rgba(79, 140, 255, 0.18);
             border-color: rgba(79, 140, 255, 0.25);
             box-shadow: 0 0 30px rgba(79, 140, 255, 0.1);
         }
+
         .card-badge {
             position: absolute;
             top: 18px;
@@ -779,6 +881,7 @@
             color: var(--accent);
             border: 1px solid rgba(0, 212, 255, 0.15);
         }
+
         .product-card h3 {
             font-family: var(--font-heading);
             font-size: 22px;
@@ -786,12 +889,14 @@
             margin-bottom: 6px;
             letter-spacing: -0.5px;
         }
+
         .product-card .desc {
             font-size: 13px;
             color: var(--text2);
             line-height: 1.6;
             margin-bottom: 18px;
         }
+
         .features-list {
             list-style: none;
             margin-bottom: 24px;
@@ -799,13 +904,16 @@
             overflow-y: auto;
             scrollbar-width: thin;
         }
+
         .features-list::-webkit-scrollbar {
             width: 3px;
         }
+
         .features-list::-webkit-scrollbar-thumb {
             background: var(--primary);
             border-radius: 10px;
         }
+
         .features-list li {
             display: flex;
             align-items: center;
@@ -815,6 +923,7 @@
             color: var(--text2);
             border-bottom: 1px solid rgba(255, 255, 255, 0.03);
         }
+
         .features-list li i {
             width: 20px;
             height: 20px;
@@ -827,6 +936,7 @@
             color: var(--accent);
             flex-shrink: 0;
         }
+
         .price-row {
             display: flex;
             align-items: center;
@@ -835,6 +945,7 @@
             padding-top: 16px;
             border-top: 1px solid rgba(255, 255, 255, 0.04);
         }
+
         .price {
             font-family: var(--font-heading);
             font-size: 28px;
@@ -842,11 +953,13 @@
             color: var(--accent);
             text-shadow: 0 0 30px rgba(0, 212, 255, 0.15);
         }
+
         .price small {
             font-size: 13px;
             font-weight: 400;
             color: var(--text3);
         }
+
         .buy-btn {
             padding: 10px 24px;
             border-radius: 12px;
@@ -865,6 +978,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .buy-btn::before {
             content: '';
             position: absolute;
@@ -873,18 +987,22 @@
             opacity: 0;
             transition: opacity 0.4s;
         }
+
         .buy-btn:hover::before {
             opacity: 1;
         }
+
         .buy-btn:hover {
             transform: translateY(-3px) scale(1.04) translateZ(8px);
             box-shadow: 0 0 50px rgba(79, 140, 255, 0.4), 0 0 80px rgba(0, 212, 255, 0.2);
         }
+
         .buy-btn i,
         .buy-btn span {
             position: relative;
             z-index: 1;
         }
+
         .buy-btn .shine {
             position: absolute;
             top: -50%;
@@ -895,6 +1013,7 @@
             transform: rotate(30deg) translateX(-100%);
             transition: transform 0.6s;
         }
+
         .buy-btn:hover .shine {
             transform: rotate(30deg) translateX(100%);
         }
@@ -907,6 +1026,7 @@
             margin-bottom: 40px;
             flex-wrap: wrap;
         }
+
         .pricing-tab {
             padding: 10px 22px;
             border-radius: 12px;
@@ -921,6 +1041,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .pricing-tab::before {
             content: '';
             position: absolute;
@@ -929,34 +1050,41 @@
             opacity: 0;
             transition: opacity 0.4s;
         }
+
         .pricing-tab.active {
             color: #fff;
             border-color: rgba(255, 255, 255, 0.15);
             box-shadow: 0 0 40px rgba(79, 140, 255, 0.2);
         }
+
         .pricing-tab.active::before {
             opacity: 1;
         }
+
         .pricing-tab:hover:not(.active) {
             background: rgba(255, 255, 255, 0.06);
             color: #fff;
             border-color: rgba(255, 255, 255, 0.12);
         }
+
         .pricing-tab span {
             position: relative;
             z-index: 1;
         }
+
         .panel-display {
             display: none;
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .panel-display.active {
             display: block;
             opacity: 1;
             transform: translateY(0);
         }
+
         .panel-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -964,11 +1092,13 @@
             align-items: start;
             margin-bottom: 32px;
         }
+
         @media(max-width:900px) {
             .panel-container {
                 grid-template-columns: 1fr;
             }
         }
+
         .panel-overview {
             width: 100%;
             border-radius: 20px;
@@ -979,16 +1109,19 @@
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
             transform: translateZ(0);
         }
+
         .panel-overview:hover {
             transform: scale(1.02) translateZ(10px);
             box-shadow: 0 20px 60px rgba(79, 140, 255, 0.12);
             border-color: rgba(79, 140, 255, 0.2);
         }
+
         .panel-overview-wrap {
             position: relative;
             border-radius: 20px;
             overflow: hidden;
         }
+
         .panel-overview-wrap .frame-glow {
             position: absolute;
             inset: -2px;
@@ -999,9 +1132,11 @@
             filter: blur(16px);
             z-index: -1;
         }
+
         .panel-overview-wrap:hover .frame-glow {
             opacity: 0.3;
         }
+
         .features-wrapper {
             background: var(--glass);
             backdrop-filter: blur(20px);
@@ -1009,6 +1144,7 @@
             padding: 28px;
             border: 1px solid var(--glass-border);
         }
+
         .features-wrapper h3 {
             font-family: var(--font-heading);
             font-size: 24px;
@@ -1017,6 +1153,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .pricing-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -1024,6 +1161,7 @@
             max-width: 1000px;
             margin: 0 auto;
         }
+
         .pricing-card {
             background: var(--glass);
             backdrop-filter: blur(16px);
@@ -1036,6 +1174,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .pricing-card::before {
             content: '';
             position: absolute;
@@ -1049,14 +1188,17 @@
             opacity: 0;
             transition: opacity 0.4s;
         }
+
         .pricing-card:hover::before {
             opacity: 1;
         }
+
         .pricing-card:hover {
             transform: translateY(-6px);
             border-color: rgba(79, 140, 255, 0.2);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
+
         .pricing-card.featured {
             border-color: rgba(0, 212, 255, 0.3);
             background: rgba(79, 140, 255, 0.05);
@@ -1064,12 +1206,15 @@
             transform: scale(1.04);
             padding: 28px 20px;
         }
+
         .pricing-card.featured::before {
             opacity: 1;
         }
+
         .pricing-card.featured .pricing-amount {
             font-size: 34px;
         }
+
         .pricing-card .featured-badge {
             position: absolute;
             top: 0;
@@ -1084,6 +1229,7 @@
             color: #fff;
             border-radius: 16px 16px 0 0;
         }
+
         .pricing-duration {
             font-size: 11px;
             color: var(--text3);
@@ -1091,16 +1237,19 @@
             letter-spacing: 1px;
             margin-bottom: 4px;
         }
+
         .pricing-amount {
             font-family: var(--font-heading);
             font-size: 28px;
             font-weight: 800;
             color: #fff;
         }
+
         .pricing-rupee {
             font-size: 18px;
             color: var(--accent);
         }
+
         .pricing-buy {
             margin-top: 12px;
             padding: 8px 16px;
@@ -1116,6 +1265,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .pricing-buy::before {
             content: '';
             position: absolute;
@@ -1124,14 +1274,17 @@
             opacity: 0;
             transition: opacity 0.4s;
         }
+
         .pricing-buy:hover::before {
             opacity: 1;
         }
+
         .pricing-buy:hover {
             color: #fff;
             border-color: rgba(255, 255, 255, 0.15);
             box-shadow: 0 0 30px rgba(79, 140, 255, 0.3);
         }
+
         .pricing-buy span {
             position: relative;
             z-index: 1;
@@ -1143,6 +1296,7 @@
             grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
             gap: 16px;
         }
+
         .optimizer-item {
             background: var(--glass);
             backdrop-filter: blur(16px);
@@ -1153,11 +1307,13 @@
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             transform-style: preserve-3d;
         }
+
         .optimizer-item:hover {
             transform: translateY(-6px) scale(1.02);
             border-color: rgba(79, 140, 255, 0.2);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
+
         .optimizer-item i {
             font-size: 28px;
             margin-bottom: 12px;
@@ -1166,12 +1322,14 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .optimizer-item h4 {
             font-size: 14px;
             font-weight: 700;
             margin-bottom: 4px;
             color: #fff;
         }
+
         .optimizer-item p {
             font-size: 12px;
             color: var(--text3);
@@ -1183,23 +1341,28 @@
             overflow: hidden;
             position: relative;
         }
+
         .reviews-track {
             display: flex;
             gap: 24px;
             animation: scrollReviews 30s linear infinite;
             width: max-content;
         }
+
         .reviews-track:hover {
             animation-play-state: paused;
         }
+
         @keyframes scrollReviews {
             0% {
                 transform: translateX(0);
             }
+
             100% {
                 transform: translateX(-50%);
             }
         }
+
         .review-card {
             background: var(--glass);
             backdrop-filter: blur(16px);
@@ -1212,17 +1375,20 @@
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             transform-style: preserve-3d;
         }
+
         .review-card:hover {
             transform: translateY(-6px);
             border-color: rgba(255, 255, 255, 0.1);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         }
+
         .review-top {
             display: flex;
             align-items: center;
             gap: 14px;
             margin-bottom: 14px;
         }
+
         .review-avatar {
             width: 44px;
             height: 44px;
@@ -1231,15 +1397,18 @@
             border: 2px solid var(--primary);
             box-shadow: 0 0 20px rgba(79, 140, 255, 0.15);
         }
+
         .review-name {
             font-weight: 700;
             font-size: 14px;
             color: #fff;
         }
+
         .review-tag {
             font-size: 11px;
             color: var(--text3);
         }
+
         .review-stars {
             display: flex;
             gap: 2px;
@@ -1247,11 +1416,13 @@
             color: #f59e0b;
             font-size: 12px;
         }
+
         .review-text {
             font-size: 13px;
             color: var(--text2);
             line-height: 1.7;
         }
+
         .review-verified {
             display: inline-flex;
             align-items: center;
@@ -1261,12 +1432,14 @@
             color: #10b981;
             font-weight: 600;
         }
+
         .review-rating-bar {
             display: flex;
             align-items: center;
             gap: 8px;
             margin-top: 8px;
         }
+
         .review-rating-bar .bar-bg {
             flex: 1;
             height: 4px;
@@ -1274,6 +1447,7 @@
             border-radius: 4px;
             overflow: hidden;
         }
+
         .review-rating-bar .bar-fill {
             height: 100%;
             background: var(--gradient);
@@ -1281,6 +1455,7 @@
             width: 0%;
             transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .review-rating-bar .bar-label {
             font-size: 10px;
             color: var(--text3);
@@ -1300,6 +1475,7 @@
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04);
         }
+
         .cta-box::before {
             content: '';
             position: absolute;
@@ -1311,26 +1487,31 @@
             animation: ctaRotate 20s linear infinite;
             pointer-events: none;
         }
+
         @keyframes ctaRotate {
             from {
                 transform: rotate(0);
             }
+
             to {
                 transform: rotate(360deg);
             }
         }
+
         .cta-box h2 {
             font-family: var(--font-heading);
             font-size: clamp(32px, 5vw, 44px);
             font-weight: 800;
             position: relative;
         }
+
         .cta-box p {
             font-size: 16px;
             color: var(--text2);
             margin-bottom: 30px;
             position: relative;
         }
+
         .cta-btns {
             display: flex;
             gap: 16px;
@@ -1347,6 +1528,7 @@
             position: relative;
             overflow: hidden;
         }
+
         footer::before {
             content: '';
             position: absolute;
@@ -1357,6 +1539,7 @@
             background: var(--gradient);
             opacity: 0.2;
         }
+
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -1364,6 +1547,7 @@
             max-width: 1200px;
             margin: 0 auto 30px;
         }
+
         .footer-brand .footer-logo {
             font-family: var(--font-heading);
             font-size: 22px;
@@ -1373,12 +1557,14 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 12px;
         }
+
         .footer-brand p {
             font-size: 13px;
             color: var(--text3);
             max-width: 280px;
             line-height: 1.7;
         }
+
         .footer-col h4 {
             font-size: 13px;
             font-weight: 700;
@@ -1387,6 +1573,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+
         .footer-col a {
             display: block;
             color: var(--text3);
@@ -1395,15 +1582,18 @@
             padding: 4px 0;
             transition: all 0.3s;
         }
+
         .footer-col a:hover {
             color: #fff;
             transform: translateX(4px);
         }
+
         .footer-socials {
             display: flex;
             gap: 14px;
             margin-top: 12px;
         }
+
         .footer-socials a {
             width: 40px;
             height: 40px;
@@ -1417,6 +1607,7 @@
             font-size: 16px;
             transition: all 0.4s;
         }
+
         .footer-socials a:hover {
             background: var(--gradient);
             color: #fff;
@@ -1424,15 +1615,18 @@
             transform: translateY(-4px);
             box-shadow: 0 8px 30px rgba(79, 140, 255, 0.2);
         }
+
         .footer-bottom {
             text-align: center;
             padding-top: 24px;
             border-top: 1px solid rgba(255, 255, 255, 0.04);
         }
+
         .footer-bottom p {
             font-size: 12px;
             color: var(--text3);
         }
+
         .footer-bottom a {
             color: var(--accent);
             text-decoration: none;
@@ -1450,9 +1644,11 @@
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
         }
+
         .modal.active {
             display: flex;
         }
+
         .modal-content {
             background: var(--bg2);
             padding: 48px 40px;
@@ -1465,6 +1661,7 @@
             position: relative;
             box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
         }
+
         .modal-content::before {
             content: '';
             position: absolute;
@@ -1477,16 +1674,19 @@
             mask-composite: exclude;
             opacity: 0.4;
         }
+
         @keyframes modalPop {
             from {
                 opacity: 0;
                 transform: scale(0.92) translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1) translateY(0);
             }
         }
+
         .close-btn {
             position: absolute;
             top: 16px;
@@ -1500,21 +1700,25 @@
             padding: 4px;
             line-height: 1;
         }
+
         .close-btn:hover {
             color: #fff;
             transform: rotate(90deg);
         }
+
         .modal-content h2 {
             font-family: var(--font-heading);
             font-size: 28px;
             font-weight: 800;
             margin-bottom: 8px;
         }
+
         .modal-content .sub {
             color: var(--text2);
             font-size: 14px;
             margin-bottom: 20px;
         }
+
         .modal-steps {
             display: flex;
             flex-direction: column;
@@ -1523,6 +1727,7 @@
             margin: 20px 0;
             padding: 0;
         }
+
         .modal-steps .step {
             display: flex;
             align-items: center;
@@ -1533,10 +1738,12 @@
             border: 1px solid rgba(255, 255, 255, 0.04);
             transition: all 0.3s;
         }
+
         .modal-steps .step:hover {
             background: rgba(255, 255, 255, 0.06);
             border-color: rgba(79, 140, 255, 0.1);
         }
+
         .modal-steps .step .num {
             width: 28px;
             height: 28px;
@@ -1550,13 +1757,16 @@
             font-weight: 700;
             flex-shrink: 0;
         }
+
         .modal-steps .step .text {
             font-size: 13px;
             color: var(--text2);
         }
+
         .modal-steps .step .text strong {
             color: #fff;
         }
+
         .modal .verified-badge {
             display: inline-flex;
             align-items: center;
@@ -1570,6 +1780,7 @@
             border: 1px solid rgba(16, 185, 129, 0.15);
             margin-bottom: 16px;
         }
+
         .qr-image {
             max-width: 220px;
             width: 100%;
@@ -1579,10 +1790,12 @@
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
             transition: all 0.4s;
         }
+
         .qr-image:hover {
             transform: scale(1.03);
             border-color: rgba(79, 140, 255, 0.3);
         }
+
         .upi-box {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(79, 140, 255, 0.15);
@@ -1595,10 +1808,12 @@
             gap: 12px;
             transition: all 0.3s;
         }
+
         .upi-box:hover {
             border-color: rgba(79, 140, 255, 0.35);
             background: rgba(79, 140, 255, 0.05);
         }
+
         .upi-box .upi-label {
             font-size: 11px;
             color: var(--text2);
@@ -1607,6 +1822,7 @@
             margin-bottom: 4px;
             font-weight: 600;
         }
+
         .upi-box .upi-id {
             font-size: 14px;
             font-weight: 700;
@@ -1614,10 +1830,12 @@
             font-family: 'SF Mono', 'Consolas', 'Courier New', monospace;
             word-break: break-all;
         }
+
         .upi-left {
             flex: 1;
             min-width: 0;
         }
+
         .copy-btn {
             padding: 8px 14px;
             background: var(--gradient);
@@ -1626,22 +1844,36 @@
             color: #fff;
             font-size: 12px;
             font-weight: 600;
-            cursor: pointer;
+            cursor: pointer !important;
             display: inline-flex;
             align-items: center;
             gap: 6px;
             transition: all 0.3s;
             flex-shrink: 0;
             white-space: nowrap;
+            pointer-events: auto !important;
+            position: relative;
+            z-index: 1;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            -webkit-user-select: none;
         }
+
         .copy-btn:hover {
             transform: translateY(-1px);
             box-shadow: 0 6px 20px rgba(79, 140, 255, 0.35);
         }
+
+        .copy-btn:active {
+            transform: translateY(0) scale(0.97);
+        }
+
         .copy-btn.copied {
             background: linear-gradient(135deg, #10b981, #059669);
             box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
         }
+
         .modal-buttons {
             display: flex;
             gap: 12px;
@@ -1649,29 +1881,36 @@
             flex-wrap: wrap;
             margin-top: 8px;
         }
+
         .modal .btn-primary {
             padding: 12px 28px;
             font-size: 13px;
         }
+
         .modal .btn-secondary {
             padding: 12px 28px;
             font-size: 13px;
         }
+
         .modal .success-anim {
             display: none;
             font-size: 48px;
             color: #10b981;
             animation: successPulse 1.5s ease-in-out infinite;
         }
+
         .modal .success-anim.show {
             display: block;
         }
+
         @keyframes successPulse {
+
             0%,
             100% {
                 transform: scale(1);
                 opacity: 1;
             }
+
             50% {
                 transform: scale(1.2);
                 opacity: 0.7;
@@ -1699,11 +1938,23 @@
             align-items: center;
             gap: 10px;
         }
+
         .toast.show {
             transform: translateX(-50%) translateY(0);
         }
+
         .toast.success {
             background: rgba(16, 185, 129, 0.92);
+        }
+
+        .toast.error {
+            background: rgba(239, 68, 68, 0.92);
+            box-shadow: 0 10px 40px rgba(239, 68, 68, 0.25);
+        }
+
+        .toast.warning {
+            background: rgba(245, 158, 11, 0.92);
+            box-shadow: 0 10px 40px rgba(245, 158, 11, 0.25);
         }
 
         /* ===== REVEAL ===== */
@@ -1712,25 +1963,32 @@
             transform: translateY(50px);
             transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
+
         .reveal-delay-1 {
             transition-delay: 0.05s;
         }
+
         .reveal-delay-2 {
             transition-delay: 0.1s;
         }
+
         .reveal-delay-3 {
             transition-delay: 0.15s;
         }
+
         .reveal-delay-4 {
             transition-delay: 0.2s;
         }
+
         .reveal-delay-5 {
             transition-delay: 0.25s;
         }
+
         .reveal-delay-6 {
             transition-delay: 0.3s;
         }
@@ -1742,38 +2000,48 @@
                 gap: 40px;
                 text-align: center;
             }
+
             .hero-left {
                 order: 2;
             }
+
             .hero-right {
                 order: 1;
             }
+
             .hero p {
                 margin-left: auto;
                 margin-right: auto;
             }
+
             .hero-btns {
                 justify-content: center;
             }
+
             .hero-stats {
                 justify-content: center;
             }
+
             .hero-trust {
                 justify-content: center;
             }
+
             .hero-showcase {
                 max-width: 400px;
                 margin: 0 auto;
             }
+
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 30px;
             }
         }
+
         @media(max-width:768px) {
             .hamburger {
                 display: flex;
             }
+
             .nav-links {
                 display: none;
                 position: absolute;
@@ -1787,9 +2055,11 @@
                 gap: 16px;
                 border-bottom: 1px solid var(--glass-border);
             }
+
             .nav-links.active {
                 display: flex;
             }
+
             .nav-links a {
                 width: 100%;
                 text-align: center;
@@ -1797,52 +2067,66 @@
                 font-size: 14px !important;
                 padding: 8px 0;
             }
+
             .nav-btn {
                 justify-content: center;
             }
+
             .products-grid {
                 grid-template-columns: 1fr;
             }
+
             .pricing-cards {
                 grid-template-columns: repeat(2, 1fr);
             }
+
             .pricing-card.featured {
                 transform: scale(1);
             }
+
             .hero-stats {
                 gap: 24px;
                 flex-wrap: wrap;
             }
+
             .optimizer-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
             .hero h1 {
                 font-size: clamp(32px, 8vw, 48px);
             }
+
             .cta-box {
                 padding: 40px 20px;
             }
+
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 24px;
             }
+
             .modal-content {
                 padding: 30px 20px;
             }
         }
+
         @media(max-width:480px) {
             .pricing-cards {
                 grid-template-columns: 1fr;
             }
+
             .hero-showcase {
                 max-width: 280px;
             }
+
             .reviews-track {
                 animation-duration: 20s;
             }
         }
     </style>
 </head>
+
 <body>
 
     <!-- 3D Canvas -->
@@ -1857,6 +2141,10 @@
 
     <!-- Toast -->
     <div class="toast" id="toast"></div>
+    <!-- Hidden permanent copy input for reliable UPI copying -->
+    <input type="text" id="upiHiddenCopy" value="theamanjangir-1@oksbi"
+        style="position:fixed;top:-9999px;left:-9999px;opacity:0;width:1px;height:1px;padding:0;border:0;margin:0;pointer-events:none;"
+        readonly tabindex="-1" aria-hidden="true">
 
     <!-- ===== NAV ===== -->
     <nav id="navbar">
@@ -1873,7 +2161,8 @@
                 <a href="#panels">Panels</a>
                 <a href="#optimizer">Optimizer</a>
                 <a href="#reviews">Reviews</a>
-                <a href="https://www.youtube.com/@AXCONTOP" target="_blank" class="nav-btn" style="background:linear-gradient(135deg,#ff0000,#cc0000);">
+                <a href="https://www.youtube.com/@AXCONTOP" target="_blank" class="nav-btn"
+                    style="background:linear-gradient(135deg,#ff0000,#cc0000);">
                     <span class="shine"></span><i class="fab fa-youtube"></i><span>YouTube</span>
                 </a>
                 <a href="javascript:void(0)" onclick="openQR()" class="nav-btn">
@@ -1922,8 +2211,10 @@
             </div>
 
             <div class="modal-buttons">
-                <a href="AXCQR.PNG" download class="btn-primary"><i class="fas fa-download"></i><span>Download QR</span></a>
-                <a href="https://discord.gg/HDEhrShHm2" target="_blank" class="btn-secondary"><i class="fab fa-discord"></i> Get Key</a>
+                <a href="AXCQR.PNG" download class="btn-primary"><i class="fas fa-download"></i><span>Download
+                        QR</span></a>
+                <a href="https://discord.gg/HDEhrShHm2" target="_blank" class="btn-secondary"><i
+                        class="fab fa-discord"></i> Get Key</a>
             </div>
 
             <div class="success-anim" id="successAnim">
@@ -1939,23 +2230,40 @@
             <div class="hero-left">
                 <div class="hero-badge"><span class="dot"></span> UNDETECTED &bull; WORKING 2026</div>
                 <h1>DOMINATE<br><span class="gradient">EVERY GAME</span></h1>
-                <p>Premium gaming tools crafted for ultimate performance. From aimbots to ESP panels — undetected, smooth, and powerful.</p>
+                <p>Premium gaming tools crafted for ultimate performance. From aimbots to ESP panels — undetected,
+                    smooth, and powerful.</p>
                 <div class="hero-btns">
-                    <a href="#products" class="btn-primary"><span class="shine"></span><i class="fas fa-rocket"></i><span>Explore Products</span></a>
-                    <a href="javascript:void(0)" onclick="openQR()" class="btn-secondary"><i class="fas fa-shopping-cart"></i> Purchase Now</a>
-                    <a href="https://discord.gg/HDEhrShHm2" target="_blank" class="btn-secondary"><i class="fab fa-discord"></i> Join Discord</a>
+                    <a href="#products" class="btn-primary"><span class="shine"></span><i
+                            class="fas fa-rocket"></i><span>Explore Products</span></a>
+                    <a href="javascript:void(0)" onclick="openQR()" class="btn-secondary"><i
+                            class="fas fa-shopping-cart"></i> Purchase Now</a>
+                    <a href="https://discord.gg/HDEhrShHm2" target="_blank" class="btn-secondary"><i
+                            class="fab fa-discord"></i> Join Discord</a>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat"><div class="stat-num" data-count="5000">0</div><div class="stat-label">Happy Users</div></div>
-                    <div class="stat"><div class="stat-num" data-count="99">0</div><div class="stat-label">Uptime %</div></div>
-                    <div class="stat"><div class="stat-num" data-count="24">0</div><div class="stat-label">/7 Support</div></div>
-                    <div class="stat"><div class="stat-num" data-count="0">0</div><div class="stat-label">Detections</div></div>
+                    <div class="stat">
+                        <div class="stat-num" data-count="5000">0</div>
+                        <div class="stat-label">Happy Users</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num" data-count="99">0</div>
+                        <div class="stat-label">Uptime %</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num" data-count="24">0</div>
+                        <div class="stat-label">/7 Support</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num" data-count="0">0</div>
+                        <div class="stat-label">Detections</div>
+                    </div>
                 </div>
                 <div class="hero-trust">
                     <span class="trust-badge"><i class="fas fa-shield-halved verified"></i> 100% Undetected</span>
                     <span class="trust-badge"><i class="fas fa-bolt" style="color:#f59e0b;"></i> Instant Delivery</span>
                     <span class="trust-badge"><i class="fas fa-headset" style="color:#10b981;"></i> 24/7 Support</span>
-                    <span class="trust-badge"><i class="fas fa-rotate" style="color:var(--accent);"></i> Lifetime Updates</span>
+                    <span class="trust-badge"><i class="fas fa-rotate" style="color:var(--accent);"></i> Lifetime
+                        Updates</span>
                 </div>
             </div>
             <div class="hero-right">
@@ -1967,18 +2275,39 @@
     </section>
 
     <!-- ===== MARQUEE ===== -->
-    <div class="marquee-wrap" style="overflow:hidden;padding:18px 0;border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);background:var(--glass);backdrop-filter:blur(12px);">
+    <div class="marquee-wrap"
+        style="overflow:hidden;padding:18px 0;border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);background:var(--glass);backdrop-filter:blur(12px);">
         <div style="display:flex;gap:48px;animation:marquee 30s linear infinite;width:max-content;">
-            <span style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">AIMBOT AI <span style="color:var(--accent);">✦</span></span>
-            <span style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">PREMIUM <span style="color:var(--accent);">✦</span></span>
-            <span style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">BRUTAL <span style="color:var(--accent);">✦</span></span>
-            <span style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">ESP VISIBLE <span style="color:var(--accent);">✦</span></span>
-            <span style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">SILENT AIM <span style="color:var(--accent);">✦</span></span>
-            <span style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">OPTIMIZER <span style="color:var(--accent);">✦</span></span>
-            <span style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">EMOTE HACK <span style="color:var(--accent);">✦</span></span>
-            <span style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">STREAMER MODE <span style="color:var(--accent);">✦</span></span>
-            <span style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">UID BYPASS <span style="color:var(--accent);">✦</span></span>
-            <span style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">AIMKILL <span style="color:var(--accent);">✦</span></span>
+            <span
+                style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">AIMBOT
+                AI <span style="color:var(--accent);">✦</span></span>
+            <span
+                style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">PREMIUM
+                <span style="color:var(--accent);">✦</span></span>
+            <span
+                style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">BRUTAL
+                <span style="color:var(--accent);">✦</span></span>
+            <span
+                style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">ESP
+                VISIBLE <span style="color:var(--accent);">✦</span></span>
+            <span
+                style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">SILENT
+                AIM <span style="color:var(--accent);">✦</span></span>
+            <span
+                style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">OPTIMIZER
+                <span style="color:var(--accent);">✦</span></span>
+            <span
+                style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">EMOTE
+                HACK <span style="color:var(--accent);">✦</span></span>
+            <span
+                style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">STREAMER
+                MODE <span style="color:var(--accent);">✦</span></span>
+            <span
+                style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">UID
+                BYPASS <span style="color:var(--accent);">✦</span></span>
+            <span
+                style="font-family:var(--font-heading);font-weight:700;color:var(--text2);white-space:nowrap;display:flex;align-items:center;gap:12px;">AIMKILL
+                <span style="color:var(--accent);">✦</span></span>
         </div>
     </div>
     <style>
@@ -1986,6 +2315,7 @@
             from {
                 transform: translateX(0);
             }
+
             to {
                 transform: translateX(-50%);
             }
@@ -2017,15 +2347,21 @@
                         <li><i class="fas fa-bolt"></i> Instant Delivery</li>
                         <li><i class="fas fa-sync-alt"></i> Lifetime Updates</li>
                     </ul>
-                    <div class="price-row"><div class="price">₹499 <small>onwards</small></div><a href="javascript:void(0)" onclick="openQR()" class="buy-btn"><span class="shine"></span><i class="fas fa-cart-shopping"></i><span>Buy</span></a></div>
+                    <div class="price-row">
+                        <div class="price">₹499 <small>onwards</small></div><a href="javascript:void(0)"
+                            onclick="openQR()" class="buy-btn"><span class="shine"></span><i
+                                class="fas fa-cart-shopping"></i><span>Buy</span></a>
+                    </div>
                 </div>
                 <!-- Optimizer -->
                 <div class="product-card reveal reveal-delay-2" data-tilt>
                     <div class="card-glow" style="background:var(--accent);top:-60px;right:-60px;"></div>
                     <div class="border-glow"></div>
                     <div class="spotlight"></div>
-                    <span class="card-badge" style="background:rgba(0,212,255,0.12);color:var(--accent);border-color:rgba(0,212,255,0.2);">HOT</span>
-                    <div class="card-icon" style="background:rgba(0,212,255,0.12);color:var(--accent);"><i class="fas fa-microchip"></i></div>
+                    <span class="card-badge"
+                        style="background:rgba(0,212,255,0.12);color:var(--accent);border-color:rgba(0,212,255,0.2);">HOT</span>
+                    <div class="card-icon" style="background:rgba(0,212,255,0.12);color:var(--accent);"><i
+                            class="fas fa-microchip"></i></div>
                     <h3>AXC Optimizer</h3>
                     <p class="desc">Ultimate PC optimization suite. Boost FPS, remove viruses, clean system.</p>
                     <ul class="features-list">
@@ -2035,15 +2371,21 @@
                         <li><i class="fas fa-rocket"></i> Full Optimization</li>
                         <li><i class="fas fa-desktop"></i> Safe PC Cleaner</li>
                     </ul>
-                    <div class="price-row"><div class="price">₹299 <small>only</small></div><a href="javascript:void(0)" onclick="openQR()" class="buy-btn"><span class="shine"></span><i class="fas fa-cart-shopping"></i><span>Buy</span></a></div>
+                    <div class="price-row">
+                        <div class="price">₹299 <small>only</small></div><a href="javascript:void(0)" onclick="openQR()"
+                            class="buy-btn"><span class="shine"></span><i
+                                class="fas fa-cart-shopping"></i><span>Buy</span></a>
+                    </div>
                 </div>
                 <!-- Basic Panel -->
                 <div class="product-card reveal reveal-delay-3" data-tilt>
                     <div class="card-glow" style="background:#10b981;top:-60px;right:-60px;"></div>
                     <div class="border-glow"></div>
                     <div class="spotlight"></div>
-                    <span class="card-badge" style="background:rgba(16,185,129,0.12);color:#10b981;border-color:rgba(16,185,129,0.2);">NEW</span>
-                    <div class="card-icon" style="background:rgba(16,185,129,0.12);color:#10b981;"><i class="fas fa-crosshairs"></i></div>
+                    <span class="card-badge"
+                        style="background:rgba(16,185,129,0.12);color:#10b981;border-color:rgba(16,185,129,0.2);">NEW</span>
+                    <div class="card-icon" style="background:rgba(16,185,129,0.12);color:#10b981;"><i
+                            class="fas fa-crosshairs"></i></div>
                     <h3>Basic Panel</h3>
                     <p class="desc">Entry-level domination. Essential features to get you started.</p>
                     <ul class="features-list">
@@ -2052,15 +2394,21 @@
                         <li><i class="fas fa-shield-halved"></i> Undetected</li>
                         <li><i class="fas fa-sync-alt"></i> Regular Updates</li>
                     </ul>
-                    <div class="price-row"><div class="price">₹1499 <small>only</small></div><a href="javascript:void(0)" onclick="openQR()" class="buy-btn"><span class="shine"></span><i class="fas fa-cart-shopping"></i><span>Buy</span></a></div>
+                    <div class="price-row">
+                        <div class="price">₹1499 <small>only</small></div><a href="javascript:void(0)"
+                            onclick="openQR()" class="buy-btn"><span class="shine"></span><i
+                                class="fas fa-cart-shopping"></i><span>Buy</span></a>
+                    </div>
                 </div>
                 <!-- Premium Panel -->
                 <div class="product-card reveal reveal-delay-1" data-tilt>
                     <div class="card-glow" style="background:#00d2ff;top:-60px;right:-60px;"></div>
                     <div class="border-glow"></div>
                     <div class="spotlight"></div>
-                    <span class="card-badge" style="background:rgba(0,212,255,0.12);color:var(--accent);border-color:rgba(0,212,255,0.2);">POPULAR</span>
-                    <div class="card-icon" style="background:rgba(0,212,255,0.12);color:var(--accent);"><i class="fas fa-crown"></i></div>
+                    <span class="card-badge"
+                        style="background:rgba(0,212,255,0.12);color:var(--accent);border-color:rgba(0,212,255,0.2);">POPULAR</span>
+                    <div class="card-icon" style="background:rgba(0,212,255,0.12);color:var(--accent);"><i
+                            class="fas fa-crown"></i></div>
                     <h3>Premium Panel</h3>
                     <p class="desc">Advanced features for serious players. Dominate with glitch fire & sniper tools.</p>
                     <ul class="features-list">
@@ -2070,15 +2418,21 @@
                         <li><i class="fas fa-palette"></i> Chams</li>
                         <li><i class="fas fa-shield-halved"></i> Undetected & Smooth</li>
                     </ul>
-                    <div class="price-row"><div class="price">₹2499 <small>/ Lifetime</small></div><a href="javascript:void(0)" onclick="openQR()" class="buy-btn"><span class="shine"></span><i class="fas fa-cart-shopping"></i><span>Buy</span></a></div>
+                    <div class="price-row">
+                        <div class="price">₹2499 <small>/ Lifetime</small></div><a href="javascript:void(0)"
+                            onclick="openQR()" class="buy-btn"><span class="shine"></span><i
+                                class="fas fa-cart-shopping"></i><span>Buy</span></a>
+                    </div>
                 </div>
                 <!-- Brutal Panel -->
                 <div class="product-card reveal reveal-delay-2" data-tilt>
                     <div class="card-glow" style="background:#f59e0b;top:-60px;right:-60px;"></div>
                     <div class="border-glow"></div>
                     <div class="spotlight"></div>
-                    <span class="card-badge" style="background:rgba(245,158,11,0.12);color:#f59e0b;border-color:rgba(245,158,11,0.2);">BRUTAL</span>
-                    <div class="card-icon" style="background:rgba(245,158,11,0.12);color:#f59e0b;"><i class="fas fa-skull-crossbones"></i></div>
+                    <span class="card-badge"
+                        style="background:rgba(245,158,11,0.12);color:#f59e0b;border-color:rgba(245,158,11,0.2);">BRUTAL</span>
+                    <div class="card-icon" style="background:rgba(245,158,11,0.12);color:#f59e0b;"><i
+                            class="fas fa-skull-crossbones"></i></div>
                     <h3>Brutal Panel</h3>
                     <p class="desc">The ultimate weapon. Full feature set including wall hack, speed hack, fly mode.</p>
                     <ul class="features-list">
@@ -2090,15 +2444,21 @@
                         <li><i class="fas fa-camera"></i> Camera Right + Chams</li>
                         <li><i class="fas fa-rotate"></i> Guest Reset</li>
                     </ul>
-                    <div class="price-row"><div class="price">₹2999 <small>/ Lifetime</small></div><a href="javascript:void(0)" onclick="openQR()" class="buy-btn"><span class="shine"></span><i class="fas fa-cart-shopping"></i><span>Buy</span></a></div>
+                    <div class="price-row">
+                        <div class="price">₹2999 <small>/ Lifetime</small></div><a href="javascript:void(0)"
+                            onclick="openQR()" class="buy-btn"><span class="shine"></span><i
+                                class="fas fa-cart-shopping"></i><span>Buy</span></a>
+                    </div>
                 </div>
                 <!-- Aimbot Visible -->
                 <div class="product-card reveal reveal-delay-3" data-tilt>
                     <div class="card-glow" style="background:#3b82f6;top:-60px;right:-60px;"></div>
                     <div class="border-glow"></div>
                     <div class="spotlight"></div>
-                    <span class="card-badge" style="background:rgba(59,130,246,0.12);color:#3b82f6;border-color:rgba(59,130,246,0.2);">NEW</span>
-                    <div class="card-icon" style="background:rgba(59,130,246,0.12);color:#3b82f6;"><i class="fas fa-eye"></i></div>
+                    <span class="card-badge"
+                        style="background:rgba(59,130,246,0.12);color:#3b82f6;border-color:rgba(59,130,246,0.2);">NEW</span>
+                    <div class="card-icon" style="background:rgba(59,130,246,0.12);color:#3b82f6;"><i
+                            class="fas fa-eye"></i></div>
                     <h3>Aimbot Visible</h3>
                     <p class="desc">Full ESP suite with advanced visuals. See everything, miss nothing.</p>
                     <ul class="features-list">
@@ -2110,15 +2470,21 @@
                         <li><i class="fas fa-rotate"></i> Auto Refresh ESP</li>
                         <li><i class="fas fa-crosshairs"></i> Crosshair + ESP Info</li>
                     </ul>
-                    <div class="price-row"><div class="price">₹2499 <small>/ Lifetime</small></div><a href="javascript:void(0)" onclick="openQR()" class="buy-btn"><span class="shine"></span><i class="fas fa-cart-shopping"></i><span>Buy</span></a></div>
+                    <div class="price-row">
+                        <div class="price">₹2499 <small>/ Lifetime</small></div><a href="javascript:void(0)"
+                            onclick="openQR()" class="buy-btn"><span class="shine"></span><i
+                                class="fas fa-cart-shopping"></i><span>Buy</span></a>
+                    </div>
                 </div>
                 <!-- Internal -->
                 <div class="product-card reveal reveal-delay-1" data-tilt>
                     <div class="card-glow" style="background:#38bdf8;top:-60px;right:-60px;"></div>
                     <div class="border-glow"></div>
                     <div class="spotlight"></div>
-                    <span class="card-badge" style="background:rgba(56,189,248,0.12);color:#38bdf8;border-color:rgba(56,189,248,0.2);">HOT</span>
-                    <div class="card-icon" style="background:rgba(56,189,248,0.12);color:#38bdf8;"><i class="fas fa-server"></i></div>
+                    <span class="card-badge"
+                        style="background:rgba(56,189,248,0.12);color:#38bdf8;border-color:rgba(56,189,248,0.2);">HOT</span>
+                    <div class="card-icon" style="background:rgba(56,189,248,0.12);color:#38bdf8;"><i
+                            class="fas fa-server"></i></div>
                     <h3>Internal</h3>
                     <p class="desc">Advanced internal cheats with maximum features and security.</p>
                     <ul class="features-list">
@@ -2131,15 +2497,21 @@
                         <li><i class="fas fa-tv"></i> STREAMER MODE</li>
                         <li><i class="fas fa-star"></i> EXTRA ESP FEATURES</li>
                     </ul>
-                    <div class="price-row"><div class="price">₹2499 <small>/ Lifetime</small></div><a href="javascript:void(0)" onclick="openQR()" class="buy-btn"><span class="shine"></span><i class="fas fa-cart-shopping"></i><span>Buy</span></a></div>
+                    <div class="price-row">
+                        <div class="price">₹2499 <small>/ Lifetime</small></div><a href="javascript:void(0)"
+                            onclick="openQR()" class="buy-btn"><span class="shine"></span><i
+                                class="fas fa-cart-shopping"></i><span>Buy</span></a>
+                    </div>
                 </div>
                 <!-- Silent Aim Main ID -->
                 <div class="product-card reveal reveal-delay-2" data-tilt>
                     <div class="card-glow" style="background:#10b981;top:-60px;right:-60px;"></div>
                     <div class="border-glow"></div>
                     <div class="spotlight"></div>
-                    <span class="card-badge" style="background:rgba(16,185,129,0.12);color:#10b981;border-color:rgba(16,185,129,0.2);">NEW</span>
-                    <div class="card-icon" style="background:rgba(16,185,129,0.12);color:#10b981;"><i class="fas fa-crosshairs"></i></div>
+                    <span class="card-badge"
+                        style="background:rgba(16,185,129,0.12);color:#10b981;border-color:rgba(16,185,129,0.2);">NEW</span>
+                    <div class="card-icon" style="background:rgba(16,185,129,0.12);color:#10b981;"><i
+                            class="fas fa-crosshairs"></i></div>
                     <h3>Silent Aim Main ID</h3>
                     <p class="desc">Powerful silent aimbot for main ID with maximum safety.</p>
                     <ul class="features-list">
@@ -2160,15 +2532,21 @@
                         <li><i class="fas fa-map-marked-alt"></i> MAP TELEPORT</li>
                         <li><i class="fas fa-bolt"></i> FAST REVIVE</li>
                     </ul>
-                    <div class="price-row"><div class="price">₹2499 <small>/ Lifetime</small></div><a href="javascript:void(0)" onclick="openQR()" class="buy-btn"><span class="shine"></span><i class="fas fa-cart-shopping"></i><span>Buy</span></a></div>
+                    <div class="price-row">
+                        <div class="price">₹2499 <small>/ Lifetime</small></div><a href="javascript:void(0)"
+                            onclick="openQR()" class="buy-btn"><span class="shine"></span><i
+                                class="fas fa-cart-shopping"></i><span>Buy</span></a>
+                    </div>
                 </div>
                 <!-- UID Bypass -->
                 <div class="product-card reveal reveal-delay-3" data-tilt>
                     <div class="card-glow" style="background:#00d2ff;top:-60px;right:-60px;"></div>
                     <div class="border-glow"></div>
                     <div class="spotlight"></div>
-                    <span class="card-badge" style="background:rgba(0,212,255,0.12);color:var(--accent);border-color:rgba(0,212,255,0.2);">LIMITED</span>
-                    <div class="card-icon" style="background:rgba(0,212,255,0.12);color:var(--accent);"><i class="fas fa-user-slash"></i></div>
+                    <span class="card-badge"
+                        style="background:rgba(0,212,255,0.12);color:var(--accent);border-color:rgba(0,212,255,0.2);">LIMITED</span>
+                    <div class="card-icon" style="background:rgba(0,212,255,0.12);color:var(--accent);"><i
+                            class="fas fa-user-slash"></i></div>
                     <h3>UID Bypass</h3>
                     <p class="desc">Bypass UID restrictions and play freely without bans.</p>
                     <ul class="features-list">
@@ -2177,15 +2555,21 @@
                         <li><i class="fas fa-lock"></i> Improved stability (beta)</li>
                         <li><i class="fas fa-rocket"></i> Enhanced compatibility</li>
                     </ul>
-                    <div class="price-row"><div class="price">₹2499 <small>/ Lifetime</small></div><a href="javascript:void(0)" onclick="openQR()" class="buy-btn"><span class="shine"></span><i class="fas fa-cart-shopping"></i><span>Buy</span></a></div>
+                    <div class="price-row">
+                        <div class="price">₹2499 <small>/ Lifetime</small></div><a href="javascript:void(0)"
+                            onclick="openQR()" class="buy-btn"><span class="shine"></span><i
+                                class="fas fa-cart-shopping"></i><span>Buy</span></a>
+                    </div>
                 </div>
                 <!-- Streamer Panel -->
                 <div class="product-card reveal reveal-delay-1" data-tilt>
                     <div class="card-glow" style="background:#10b981;top:-60px;right:-60px;"></div>
                     <div class="border-glow"></div>
                     <div class="spotlight"></div>
-                    <span class="card-badge" style="background:rgba(16,185,129,0.12);color:#10b981;border-color:rgba(16,185,129,0.2);">POPULAR</span>
-                    <div class="card-icon" style="background:rgba(16,185,129,0.12);color:#10b981;"><i class="fas fa-video"></i></div>
+                    <span class="card-badge"
+                        style="background:rgba(16,185,129,0.12);color:#10b981;border-color:rgba(16,185,129,0.2);">POPULAR</span>
+                    <div class="card-icon" style="background:rgba(16,185,129,0.12);color:#10b981;"><i
+                            class="fas fa-video"></i></div>
                     <h3>Streamer Panel</h3>
                     <p class="desc">Streamer-friendly panel with hidden features for safe streaming.</p>
                     <ul class="features-list">
@@ -2200,15 +2584,21 @@
                         <li><i class="fas fa-desktop"></i> Website Control</li>
                         <li><i class="fas fa-globe"></i> Full Browser Control</li>
                     </ul>
-                    <div class="price-row"><div class="price">₹2499 <small>/ Lifetime</small></div><a href="javascript:void(0)" onclick="openQR()" class="buy-btn"><span class="shine"></span><i class="fas fa-cart-shopping"></i><span>Buy</span></a></div>
+                    <div class="price-row">
+                        <div class="price">₹2499 <small>/ Lifetime</small></div><a href="javascript:void(0)"
+                            onclick="openQR()" class="buy-btn"><span class="shine"></span><i
+                                class="fas fa-cart-shopping"></i><span>Buy</span></a>
+                    </div>
                 </div>
                 <!-- R4T Android -->
                 <div class="product-card reveal reveal-delay-2" data-tilt>
                     <div class="card-glow" style="background:#3b82f6;top:-60px;right:-60px;"></div>
                     <div class="border-glow"></div>
                     <div class="spotlight"></div>
-                    <span class="card-badge" style="background:rgba(59,130,246,0.12);color:#3b82f6;border-color:rgba(59,130,246,0.2);">HOT</span>
-                    <div class="card-icon" style="background:rgba(59,130,246,0.12);color:#3b82f6;"><i class="fas fa-mobile-alt"></i></div>
+                    <span class="card-badge"
+                        style="background:rgba(59,130,246,0.12);color:#3b82f6;border-color:rgba(59,130,246,0.2);">HOT</span>
+                    <div class="card-icon" style="background:rgba(59,130,246,0.12);color:#3b82f6;"><i
+                            class="fas fa-mobile-alt"></i></div>
                     <h3>R4T Android Panel</h3>
                     <p class="desc">Powerful Remote Management Solution with advanced features.</p>
                     <ul class="features-list">
@@ -2218,14 +2608,19 @@
                         <li><i class="fas fa-lock"></i> Secure & Reliable Connectivity</li>
                         <li><i class="fas fa-th-large"></i> Modern Dashboard Design</li>
                     </ul>
-                    <div class="price-row"><div class="price">₹899 <small>only</small></div><a href="javascript:void(0)" onclick="openQR()" class="buy-btn"><span class="shine"></span><i class="fas fa-cart-shopping"></i><span>Buy</span></a></div>
+                    <div class="price-row">
+                        <div class="price">₹899 <small>only</small></div><a href="javascript:void(0)" onclick="openQR()"
+                            class="buy-btn"><span class="shine"></span><i
+                                class="fas fa-cart-shopping"></i><span>Buy</span></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ===== PANELS ===== -->
-    <section id="panels" style="background:var(--bg2);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);">
+    <section id="panels"
+        style="background:var(--bg2);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-tag"><i class="fas fa-crosshairs"></i> Panels</span>
@@ -2256,21 +2651,55 @@
                         <div class="frame-glow"></div>
                         <img src="BASIC.png" alt="Basic" class="panel-overview">
                     </div>
-                    <div class="features-wrapper"><h3>Basic Panel — Features</h3>
+                    <div class="features-wrapper">
+                        <h3>Basic Panel — Features</h3>
                         <div class="optimizer-grid reveal" style="margin-bottom:0;gap:10px;">
-                            <div class="optimizer-item"><i class="fas fa-brain"></i><h4>Aimbot AI</h4><p>Smart targeting</p></div>
-                            <div class="optimizer-item"><i class="fas fa-eye-dropper"></i><h4>Chams Menu</h4><p>Visual highlights</p></div>
-                            <div class="optimizer-item"><i class="fas fa-shield-halved"></i><h4>Undetected</h4><p>100% safe</p></div>
-                            <div class="optimizer-item"><i class="fas fa-sync-alt"></i><h4>Regular Updates</h4><p>Always fresh</p></div>
+                            <div class="optimizer-item"><i class="fas fa-brain"></i>
+                                <h4>Aimbot AI</h4>
+                                <p>Smart targeting</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-eye-dropper"></i>
+                                <h4>Chams Menu</h4>
+                                <p>Visual highlights</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-shield-halved"></i>
+                                <h4>Undetected</h4>
+                                <p>100% safe</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-sync-alt"></i>
+                                <h4>Regular Updates</h4>
+                                <p>Always fresh</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pricing-cards reveal">
-                    <div class="pricing-card"><div class="pricing-duration">3 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">7 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">15 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">30 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card featured"><div class="featured-badge">⭐ BEST VALUE</div><div class="pricing-duration">Lifetime</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>1499</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">3 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">7 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">15 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">30 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">⭐ BEST VALUE</div>
+                        <div class="pricing-duration">Lifetime</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>1499</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -2281,20 +2710,47 @@
                         <div class="frame-glow"></div>
                         <img src="OPTIMIZER.png" alt="Optimizer" class="panel-overview">
                     </div>
-                    <div class="features-wrapper"><h3>Optimizer — Features</h3>
+                    <div class="features-wrapper">
+                        <h3>Optimizer — Features</h3>
                         <div class="optimizer-grid reveal" style="margin-bottom:0;gap:10px;">
-                            <div class="optimizer-item"><i class="fas fa-shield-virus"></i><h4>Virus Remover</h4><p>Remove trojan/malware</p></div>
-                            <div class="optimizer-item"><i class="fas fa-gamepad"></i><h4>Lag Fix</h4><p>FPS & emulator boost</p></div>
-                            <div class="optimizer-item"><i class="fas fa-broom"></i><h4>System Cleaner</h4><p>Temp, cache, DNS</p></div>
-                            <div class="optimizer-item"><i class="fas fa-rocket"></i><h4>Full Optimization</h4><p>SFC, DISM tweaks</p></div>
-                            <div class="optimizer-item"><i class="fas fa-desktop"></i><h4>Safe PC Cleaner</h4><p>No data loss</p></div>
-                            <div class="optimizer-item"><i class="fas fa-scroll"></i><h4>Activity Log</h4><p>Real-time status</p></div>
-                            <div class="optimizer-item"><i class="fas fa-user-shield"></i><h4>Admin Mode</h4><p>Full access</p></div>
+                            <div class="optimizer-item"><i class="fas fa-shield-virus"></i>
+                                <h4>Virus Remover</h4>
+                                <p>Remove trojan/malware</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-gamepad"></i>
+                                <h4>Lag Fix</h4>
+                                <p>FPS & emulator boost</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-broom"></i>
+                                <h4>System Cleaner</h4>
+                                <p>Temp, cache, DNS</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-rocket"></i>
+                                <h4>Full Optimization</h4>
+                                <p>SFC, DISM tweaks</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-desktop"></i>
+                                <h4>Safe PC Cleaner</h4>
+                                <p>No data loss</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-scroll"></i>
+                                <h4>Activity Log</h4>
+                                <p>Real-time status</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-user-shield"></i>
+                                <h4>Admin Mode</h4>
+                                <p>Full access</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pricing-cards reveal">
-                    <div class="pricing-card featured"><div class="featured-badge">⭐ BEST VALUE</div><div class="pricing-duration">Lifetime</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>299</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">⭐ BEST VALUE</div>
+                        <div class="pricing-duration">Lifetime</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>299</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -2305,22 +2761,59 @@
                         <div class="frame-glow"></div>
                         <img src="PREMIUM.png" alt="Premium" class="panel-overview">
                     </div>
-                    <div class="features-wrapper"><h3>Premium — Features</h3>
+                    <div class="features-wrapper">
+                        <h3>Premium — Features</h3>
                         <div class="optimizer-grid reveal" style="margin-bottom:0;gap:10px;">
-                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i><h4>Aimbot + AI</h4><p>Smart aim</p></div>
-                            <div class="optimizer-item"><i class="fas fa-fire"></i><h4>Glitch Fire</h4><p>Rapid fire</p></div>
-                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i><h4>Sniper Scope</h4><p>Zoom & switch</p></div>
-                            <div class="optimizer-item"><i class="fas fa-palette"></i><h4>Chams</h4><p>Color highlights</p></div>
-                            <div class="optimizer-item"><i class="fas fa-shield-halved"></i><h4>Undetected</h4><p>Smooth & safe</p></div>
+                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i>
+                                <h4>Aimbot + AI</h4>
+                                <p>Smart aim</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-fire"></i>
+                                <h4>Glitch Fire</h4>
+                                <p>Rapid fire</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i>
+                                <h4>Sniper Scope</h4>
+                                <p>Zoom & switch</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-palette"></i>
+                                <h4>Chams</h4>
+                                <p>Color highlights</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-shield-halved"></i>
+                                <h4>Undetected</h4>
+                                <p>Smooth & safe</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pricing-cards reveal">
-                    <div class="pricing-card"><div class="pricing-duration">1 Day</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">3 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">7 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">30 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card featured"><div class="featured-badge">⭐ BEST VALUE</div><div class="pricing-duration">Lifetime</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">1 Day</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">3 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">7 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">30 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">⭐ BEST VALUE</div>
+                        <div class="pricing-duration">Lifetime</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -2331,24 +2824,67 @@
                         <div class="frame-glow"></div>
                         <img src="BRUTAL.png" alt="Brutal" class="panel-overview">
                     </div>
-                    <div class="features-wrapper"><h3>Brutal — Features</h3>
+                    <div class="features-wrapper">
+                        <h3>Brutal — Features</h3>
                         <div class="optimizer-grid reveal" style="margin-bottom:0;gap:10px;">
-                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i><h4>Aimbot Head/Neck/Drag/AI/FOV</h4><p>Precision aim</p></div>
-                            <div class="optimizer-item"><i class="fas fa-fire"></i><h4>Glitch Fire + No Reload/Recoil</h4><p>Unlimited ammo</p></div>
-                            <div class="optimizer-item"><i class="fas fa-cube"></i><h4>Wall Hack + Speed Hack</h4><p>See through walls</p></div>
-                            <div class="optimizer-item"><i class="fas fa-plane"></i><h4>Fly Run Fire</h4><p>Air dominance</p></div>
-                            <div class="optimizer-item"><i class="fas fa-search"></i><h4>2X/4X Scope Tracking</h4><p>Zoom aim</p></div>
-                            <div class="optimizer-item"><i class="fas fa-camera"></i><h4>Camera Right + Chams</h4><p>Visual control</p></div>
-                            <div class="optimizer-item"><i class="fas fa-rotate"></i><h4>Guest Reset</h4><p>Fresh start</p></div>
+                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i>
+                                <h4>Aimbot Head/Neck/Drag/AI/FOV</h4>
+                                <p>Precision aim</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-fire"></i>
+                                <h4>Glitch Fire + No Reload/Recoil</h4>
+                                <p>Unlimited ammo</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-cube"></i>
+                                <h4>Wall Hack + Speed Hack</h4>
+                                <p>See through walls</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-plane"></i>
+                                <h4>Fly Run Fire</h4>
+                                <p>Air dominance</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-search"></i>
+                                <h4>2X/4X Scope Tracking</h4>
+                                <p>Zoom aim</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-camera"></i>
+                                <h4>Camera Right + Chams</h4>
+                                <p>Visual control</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-rotate"></i>
+                                <h4>Guest Reset</h4>
+                                <p>Fresh start</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pricing-cards reveal">
-                    <div class="pricing-card"><div class="pricing-duration">1 Day</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">3 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">7 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">30 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card featured"><div class="featured-badge">⭐ BEST VALUE</div><div class="pricing-duration">Lifetime</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">1 Day</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">3 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">7 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">30 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">⭐ BEST VALUE</div>
+                        <div class="pricing-duration">Lifetime</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -2359,24 +2895,67 @@
                         <div class="frame-glow"></div>
                         <img src="VISIBLE.png" alt="Visible" class="panel-overview">
                     </div>
-                    <div class="features-wrapper"><h3>Aimbot Visible — Features</h3>
+                    <div class="features-wrapper">
+                        <h3>Aimbot Visible — Features</h3>
                         <div class="optimizer-grid reveal" style="margin-bottom:0;gap:10px;">
-                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i><h4>Aimbot Visible + Rage</h4><p>Dual mode</p></div>
-                            <div class="optimizer-item"><i class="fas fa-bolt"></i><h4>No Recoil + No Reload</h4><p>Unlimited fire</p></div>
-                            <div class="optimizer-item"><i class="fas fa-eye"></i><h4>Full ESP: Box/Skeleton/Glow/Health</h4><p>Complete vision</p></div>
-                            <div class="optimizer-item"><i class="fas fa-tv"></i><h4>Streamer Mode</h4><p>Safe streaming</p></div>
-                            <div class="optimizer-item"><i class="fas fa-palette"></i><h4>Adjustable ESP Colours</h4><p>Custom visuals</p></div>
-                            <div class="optimizer-item"><i class="fas fa-rotate"></i><h4>Auto Refresh ESP</h4><p>Always updated</p></div>
-                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i><h4>Crosshair + ESP Info</h4><p>Detailed HUD</p></div>
+                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i>
+                                <h4>Aimbot Visible + Rage</h4>
+                                <p>Dual mode</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-bolt"></i>
+                                <h4>No Recoil + No Reload</h4>
+                                <p>Unlimited fire</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-eye"></i>
+                                <h4>Full ESP: Box/Skeleton/Glow/Health</h4>
+                                <p>Complete vision</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-tv"></i>
+                                <h4>Streamer Mode</h4>
+                                <p>Safe streaming</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-palette"></i>
+                                <h4>Adjustable ESP Colours</h4>
+                                <p>Custom visuals</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-rotate"></i>
+                                <h4>Auto Refresh ESP</h4>
+                                <p>Always updated</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i>
+                                <h4>Crosshair + ESP Info</h4>
+                                <p>Detailed HUD</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pricing-cards reveal">
-                    <div class="pricing-card"><div class="pricing-duration">1 Day</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">3 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">7 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">30 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card featured"><div class="featured-badge">⭐ BEST VALUE</div><div class="pricing-duration">Lifetime</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">1 Day</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">3 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">7 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">30 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">⭐ BEST VALUE</div>
+                        <div class="pricing-duration">Lifetime</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -2387,25 +2966,71 @@
                         <div class="frame-glow"></div>
                         <img src="INTERNAL.png" alt="Internal" class="panel-overview">
                     </div>
-                    <div class="features-wrapper"><h3>Internal — Features</h3>
+                    <div class="features-wrapper">
+                        <h3>Internal — Features</h3>
                         <div class="optimizer-grid reveal" style="margin-bottom:0;gap:10px;">
-                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i><h4>AIMBOT VISIBLE</h4><p>See & aim</p></div>
-                            <div class="optimizer-item"><i class="fas fa-skull"></i><h4>AIMBOT RAGE</h4><p>Aggressive aim</p></div>
-                            <div class="optimizer-item"><i class="fas fa-eye-slash"></i><h4>SILENT AIM MAIN ID</h4><p>Stealth aim</p></div>
-                            <div class="optimizer-item"><i class="fas fa-bolt"></i><h4>NO RECOIL</h4><p>Zero shake</p></div>
-                            <div class="optimizer-item"><i class="fas fa-sync-alt"></i><h4>NO RELOAD</h4><p>Unlimited ammo</p></div>
-                            <div class="optimizer-item"><i class="fas fa-expand-arrows-alt"></i><h4>AIMFOV CONTROL</h4><p>Adjust FOV</p></div>
-                            <div class="optimizer-item"><i class="fas fa-tv"></i><h4>STREAMER MODE</h4><p>Safe stream</p></div>
-                            <div class="optimizer-item"><i class="fas fa-star"></i><h4>EXTRA ESP FEATURES</h4><p>More visuals</p></div>
+                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i>
+                                <h4>AIMBOT VISIBLE</h4>
+                                <p>See & aim</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-skull"></i>
+                                <h4>AIMBOT RAGE</h4>
+                                <p>Aggressive aim</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-eye-slash"></i>
+                                <h4>SILENT AIM MAIN ID</h4>
+                                <p>Stealth aim</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-bolt"></i>
+                                <h4>NO RECOIL</h4>
+                                <p>Zero shake</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-sync-alt"></i>
+                                <h4>NO RELOAD</h4>
+                                <p>Unlimited ammo</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-expand-arrows-alt"></i>
+                                <h4>AIMFOV CONTROL</h4>
+                                <p>Adjust FOV</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-tv"></i>
+                                <h4>STREAMER MODE</h4>
+                                <p>Safe stream</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-star"></i>
+                                <h4>EXTRA ESP FEATURES</h4>
+                                <p>More visuals</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pricing-cards reveal">
-                    <div class="pricing-card"><div class="pricing-duration">1 Day</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">3 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">7 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">30 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card featured"><div class="featured-badge">⭐ BEST VALUE</div><div class="pricing-duration">Lifetime</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">1 Day</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">3 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">7 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">30 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">⭐ BEST VALUE</div>
+                        <div class="pricing-duration">Lifetime</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -2416,33 +3041,103 @@
                         <div class="frame-glow"></div>
                         <img src="SILENT AIM MAIN ID.png" alt="Silent Aim" class="panel-overview">
                     </div>
-                    <div class="features-wrapper"><h3>Silent Aim — Features</h3>
+                    <div class="features-wrapper">
+                        <h3>Silent Aim — Features</h3>
                         <div class="optimizer-grid reveal" style="margin-bottom:0;gap:10px;">
-                            <div class="optimizer-item"><i class="fas fa-robot"></i><h4>AIMBOT AI</h4><p>Smart aim</p></div>
-                            <div class="optimizer-item"><i class="fas fa-hand-sparkles"></i><h4>SHAKE KILL</h4><p>Shake & kill</p></div>
-                            <div class="optimizer-item"><i class="fas fa-magnet"></i><h4>ENEMY PULL 360°</h4><p>Pull enemies</p></div>
-                            <div class="optimizer-item"><i class="fas fa-eye-slash"></i><h4>SILENT AIM</h4><p>Stealth kill</p></div>
-                            <div class="optimizer-item"><i class="fas fa-expand-arrows-alt"></i><h4>AIM FOV 1000°</h4><p>Wide FOV</p></div>
-                            <div class="optimizer-item"><i class="fas fa-ban"></i><h4>IGNORE KNOCK</h4><p>No knock</p></div>
-                            <div class="optimizer-item"><i class="fas fa-bolt"></i><h4>NO RECOIL</h4><p>Zero shake</p></div>
-                            <div class="optimizer-item"><i class="fas fa-palette"></i><h4>DRAW FOV</h4><p>Visual FOV</p></div>
-                            <div class="optimizer-item"><i class="fas fa-arrow-up"></i><h4>UP PLAYER</h4><p>Lift enemies</p></div>
-                            <div class="optimizer-item"><i class="fas fa-plug"></i><h4>TELEPORT KILL (10M)</h4><p>Teleport kill</p></div>
-                            <div class="optimizer-item"><i class="fas fa-camera"></i><h4>CAMERA RIGHT</h4><p>Camera control</p></div>
-                            <div class="optimizer-item"><i class="fas fa-flask"></i><h4>TELEKILL (BETA)</h4><p>Beta telekill</p></div>
-                            <div class="optimizer-item"><i class="fas fa-arrow-down"></i><h4>DOWN PLAYER</h4><p>Drop enemies</p></div>
-                            <div class="optimizer-item"><i class="fas fa-dove"></i><h4>FLY HACK</h4><p>Fly freely</p></div>
-                            <div class="optimizer-item"><i class="fas fa-map-marked-alt"></i><h4>MAP TELEPORT</h4><p>Jump anywhere</p></div>
-                            <div class="optimizer-item"><i class="fas fa-bolt"></i><h4>FAST REVIVE</h4><p>Quick revive</p></div>
+                            <div class="optimizer-item"><i class="fas fa-robot"></i>
+                                <h4>AIMBOT AI</h4>
+                                <p>Smart aim</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-hand-sparkles"></i>
+                                <h4>SHAKE KILL</h4>
+                                <p>Shake & kill</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-magnet"></i>
+                                <h4>ENEMY PULL 360°</h4>
+                                <p>Pull enemies</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-eye-slash"></i>
+                                <h4>SILENT AIM</h4>
+                                <p>Stealth kill</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-expand-arrows-alt"></i>
+                                <h4>AIM FOV 1000°</h4>
+                                <p>Wide FOV</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-ban"></i>
+                                <h4>IGNORE KNOCK</h4>
+                                <p>No knock</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-bolt"></i>
+                                <h4>NO RECOIL</h4>
+                                <p>Zero shake</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-palette"></i>
+                                <h4>DRAW FOV</h4>
+                                <p>Visual FOV</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-arrow-up"></i>
+                                <h4>UP PLAYER</h4>
+                                <p>Lift enemies</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-plug"></i>
+                                <h4>TELEPORT KILL (10M)</h4>
+                                <p>Teleport kill</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-camera"></i>
+                                <h4>CAMERA RIGHT</h4>
+                                <p>Camera control</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-flask"></i>
+                                <h4>TELEKILL (BETA)</h4>
+                                <p>Beta telekill</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-arrow-down"></i>
+                                <h4>DOWN PLAYER</h4>
+                                <p>Drop enemies</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-dove"></i>
+                                <h4>FLY HACK</h4>
+                                <p>Fly freely</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-map-marked-alt"></i>
+                                <h4>MAP TELEPORT</h4>
+                                <p>Jump anywhere</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-bolt"></i>
+                                <h4>FAST REVIVE</h4>
+                                <p>Quick revive</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pricing-cards reveal">
-                    <div class="pricing-card"><div class="pricing-duration">1 Day</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">3 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">7 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">30 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card featured"><div class="featured-badge">⭐ BEST VALUE</div><div class="pricing-duration">Lifetime</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">1 Day</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">3 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">7 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">30 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">⭐ BEST VALUE</div>
+                        <div class="pricing-duration">Lifetime</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -2453,21 +3148,55 @@
                         <div class="frame-glow"></div>
                         <img src="UID BYPASS.png" alt="UID Bypass" class="panel-overview">
                     </div>
-                    <div class="features-wrapper"><h3>UID Bypass — Features</h3>
+                    <div class="features-wrapper">
+                        <h3>UID Bypass — Features</h3>
                         <div class="optimizer-grid reveal" style="margin-bottom:0;gap:10px;">
-                            <div class="optimizer-item"><i class="fas fa-sparkles"></i><h4>Seamless bypass</h4><p>Easy bypass</p></div>
-                            <div class="optimizer-item"><i class="fas fa-bolt"></i><h4>Faster setup</h4><p>Quick setup</p></div>
-                            <div class="optimizer-item"><i class="fas fa-lock"></i><h4>Improved stability</h4><p>Stable beta</p></div>
-                            <div class="optimizer-item"><i class="fas fa-rocket"></i><h4>Enhanced compatibility</h4><p>Works with panels</p></div>
+                            <div class="optimizer-item"><i class="fas fa-sparkles"></i>
+                                <h4>Seamless bypass</h4>
+                                <p>Easy bypass</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-bolt"></i>
+                                <h4>Faster setup</h4>
+                                <p>Quick setup</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-lock"></i>
+                                <h4>Improved stability</h4>
+                                <p>Stable beta</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-rocket"></i>
+                                <h4>Enhanced compatibility</h4>
+                                <p>Works with panels</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pricing-cards reveal">
-                    <div class="pricing-card"><div class="pricing-duration">1 Day</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">3 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">7 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">30 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card featured"><div class="featured-badge">⭐ BEST VALUE</div><div class="pricing-duration">Lifetime</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">1 Day</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">3 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">7 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">30 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">⭐ BEST VALUE</div>
+                        <div class="pricing-duration">Lifetime</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -2478,21 +3207,55 @@
                         <div class="frame-glow"></div>
                         <img src="PAID PUSH.png" alt="Paid Push" class="panel-overview">
                     </div>
-                    <div class="features-wrapper"><h3>Paid Push — Features</h3>
+                    <div class="features-wrapper">
+                        <h3>Paid Push — Features</h3>
                         <div class="optimizer-grid reveal" style="margin-bottom:0;gap:10px;">
-                            <div class="optimizer-item"><i class="fas fa-rocket"></i><h4>Instant Rank Boost</h4><p>Rank up fast</p></div>
-                            <div class="optimizer-item"><i class="fas fa-user-tie"></i><h4>Professional Players</h4><p>Pro squad</p></div>
-                            <div class="optimizer-item"><i class="fas fa-shield-halved"></i><h4>Safe & Secure</h4><p>100% safe</p></div>
-                            <div class="optimizer-item"><i class="fas fa-headset"></i><h4>24/7 Support</h4><p>Always help</p></div>
+                            <div class="optimizer-item"><i class="fas fa-rocket"></i>
+                                <h4>Instant Rank Boost</h4>
+                                <p>Rank up fast</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-user-tie"></i>
+                                <h4>Professional Players</h4>
+                                <p>Pro squad</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-shield-halved"></i>
+                                <h4>Safe & Secure</h4>
+                                <p>100% safe</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-headset"></i>
+                                <h4>24/7 Support</h4>
+                                <p>Always help</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pricing-cards reveal">
-                    <div class="pricing-card"><div class="pricing-duration">1 Star</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>6</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">10 Star</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>60</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">50 Star</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>300</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">100 Star</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>600</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card featured"><div class="featured-badge">⭐ BEST VALUE</div><div class="pricing-duration">999 Star</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>5999</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">1 Star</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>6</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">10 Star</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>60</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">50 Star</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>300</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">100 Star</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>600</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">⭐ BEST VALUE</div>
+                        <div class="pricing-duration">999 Star</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>5999</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -2503,21 +3266,55 @@
                         <div class="frame-glow"></div>
                         <img src="MOBILE PANEL NON ROOT.png" alt="Mobile" class="panel-overview">
                     </div>
-                    <div class="features-wrapper"><h3>Mobile Panel — Features</h3>
+                    <div class="features-wrapper">
+                        <h3>Mobile Panel — Features</h3>
                         <div class="optimizer-grid reveal" style="margin-bottom:0;gap:10px;">
-                            <div class="optimizer-item"><i class="fas fa-bolt"></i><h4>70% AIMBOT</h4><p>Smart aim</p></div>
-                            <div class="optimizer-item"><i class="fas fa-map-marker-alt"></i><h4>LOCATION SUPPORT</h4><p>Location based</p></div>
-                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i><h4>Smooth Aim Assist</h4><p>Silky aim</p></div>
-                            <div class="optimizer-item"><i class="fas fa-rocket"></i><h4>Lag Free Experience</h4><p>No lag</p></div>
+                            <div class="optimizer-item"><i class="fas fa-bolt"></i>
+                                <h4>70% AIMBOT</h4>
+                                <p>Smart aim</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-map-marker-alt"></i>
+                                <h4>LOCATION SUPPORT</h4>
+                                <p>Location based</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i>
+                                <h4>Smooth Aim Assist</h4>
+                                <p>Silky aim</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-rocket"></i>
+                                <h4>Lag Free Experience</h4>
+                                <p>No lag</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pricing-cards reveal">
-                    <div class="pricing-card"><div class="pricing-duration">1 Day</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">3 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">7 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">30 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card featured"><div class="featured-badge">⭐ BEST VALUE</div><div class="pricing-duration">Lifetime</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">1 Day</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">3 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">7 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">30 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">⭐ BEST VALUE</div>
+                        <div class="pricing-duration">Lifetime</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -2528,33 +3325,103 @@
                         <div class="frame-glow"></div>
                         <img src="SILENT AIM COVER.png" alt="Aim Silent" class="panel-overview">
                     </div>
-                    <div class="features-wrapper"><h3>Aim Silent Cover — Features</h3>
+                    <div class="features-wrapper">
+                        <h3>Aim Silent Cover — Features</h3>
                         <div class="optimizer-grid reveal" style="margin-bottom:0;gap:10px;">
-                            <div class="optimizer-item"><i class="fas fa-eye-slash"></i><h4>SILENT AIM</h4><p>Stealth aim</p></div>
-                            <div class="optimizer-item"><i class="fas fa-shield-alt"></i><h4>ENABLE COVER HIT</h4><p>Hit through cover</p></div>
-                            <div class="optimizer-item"><i class="fas fa-bolt"></i><h4>SPEED RAPID</h4><p>Fast fire</p></div>
-                            <div class="optimizer-item"><i class="fas fa-ban"></i><h4>NO HIT DELAY</h4><p>Instant hit</p></div>
-                            <div class="optimizer-item"><i class="fas fa-arrow-up"></i><h4>UP PLAYER</h4><p>Lift enemies</p></div>
-                            <div class="optimizer-item"><i class="fas fa-fire"></i><h4>QUICK BURST</h4><p>Burst fire</p></div>
-                            <div class="optimizer-item"><i class="fas fa-fire-alt"></i><h4>RAPID FIRE</h4><p>Fast shots</p></div>
-                            <div class="optimizer-item"><i class="fas fa-bolt"></i><h4>FAST FIRE</h4><p>Quick trigger</p></div>
-                            <div class="optimizer-item"><i class="fas fa-brain"></i><h4>SMART MOVE</h4><p>AI movement</p></div>
-                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i><h4>AIM TRACK</h4><p>Track enemies</p></div>
-                            <div class="optimizer-item"><i class="fas fa-sync-alt"></i><h4>FAST RELOAD</h4><p>Quick reload</p></div>
-                            <div class="optimizer-item"><i class="fas fa-robot"></i><h4>AUTO FIRE</h4><p>Auto shoot</p></div>
-                            <div class="optimizer-item"><i class="fas fa-bolt"></i><h4>FAST REVIVE</h4><p>Quick revive</p></div>
-                            <div class="optimizer-item"><i class="fas fa-dove"></i><h4>FLY X80</h4><p>Fly high</p></div>
-                            <div class="optimizer-item"><i class="fas fa-dove"></i><h4>FLY X40</h4><p>Fly medium</p></div>
-                            <div class="optimizer-item"><i class="fas fa-map-marked-alt"></i><h4>MAP TELEPORT</h4><p>Jump anywhere</p></div>
+                            <div class="optimizer-item"><i class="fas fa-eye-slash"></i>
+                                <h4>SILENT AIM</h4>
+                                <p>Stealth aim</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-shield-alt"></i>
+                                <h4>ENABLE COVER HIT</h4>
+                                <p>Hit through cover</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-bolt"></i>
+                                <h4>SPEED RAPID</h4>
+                                <p>Fast fire</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-ban"></i>
+                                <h4>NO HIT DELAY</h4>
+                                <p>Instant hit</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-arrow-up"></i>
+                                <h4>UP PLAYER</h4>
+                                <p>Lift enemies</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-fire"></i>
+                                <h4>QUICK BURST</h4>
+                                <p>Burst fire</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-fire-alt"></i>
+                                <h4>RAPID FIRE</h4>
+                                <p>Fast shots</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-bolt"></i>
+                                <h4>FAST FIRE</h4>
+                                <p>Quick trigger</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-brain"></i>
+                                <h4>SMART MOVE</h4>
+                                <p>AI movement</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i>
+                                <h4>AIM TRACK</h4>
+                                <p>Track enemies</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-sync-alt"></i>
+                                <h4>FAST RELOAD</h4>
+                                <p>Quick reload</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-robot"></i>
+                                <h4>AUTO FIRE</h4>
+                                <p>Auto shoot</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-bolt"></i>
+                                <h4>FAST REVIVE</h4>
+                                <p>Quick revive</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-dove"></i>
+                                <h4>FLY X80</h4>
+                                <p>Fly high</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-dove"></i>
+                                <h4>FLY X40</h4>
+                                <p>Fly medium</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-map-marked-alt"></i>
+                                <h4>MAP TELEPORT</h4>
+                                <p>Jump anywhere</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pricing-cards reveal">
-                    <div class="pricing-card"><div class="pricing-duration">1 Day</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">3 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">7 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">30 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card featured"><div class="featured-badge">⭐ BEST VALUE</div><div class="pricing-duration">Lifetime</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">1 Day</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">3 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">7 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">30 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">⭐ BEST VALUE</div>
+                        <div class="pricing-duration">Lifetime</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -2565,25 +3432,71 @@
                         <div class="frame-glow"></div>
                         <img src="AIMKILL.png" alt="Aimkill" class="panel-overview">
                     </div>
-                    <div class="features-wrapper"><h3>Aimkill — Features</h3>
+                    <div class="features-wrapper">
+                        <h3>Aimkill — Features</h3>
                         <div class="optimizer-grid reveal" style="margin-bottom:0;gap:10px;">
-                            <div class="optimizer-item"><i class="fas fa-check-circle"></i><h4>AIMKILL</h4><p>Kill with aim</p></div>
-                            <div class="optimizer-item"><i class="fas fa-bolt"></i><h4>TELEKILL (10M)</h4><p>Teleport kill</p></div>
-                            <div class="optimizer-item"><i class="fas fa-arrow-up"></i><h4>UP PLAYER</h4><p>Lift & kill</p></div>
-                            <div class="optimizer-item"><i class="fas fa-sync-alt"></i><h4>AIM KILL 360°</h4><p>Full circle kill</p></div>
-                            <div class="optimizer-item"><i class="fas fa-hand-sparkles"></i><h4>SHAKE KILL v2</h4><p>Shake & kill</p></div>
-                            <div class="optimizer-item"><i class="fas fa-bomb"></i><h4>SPAWN KILL</h4><p>Kill on spawn</p></div>
-                            <div class="optimizer-item"><i class="fas fa-arrow-down"></i><h4>DOWN KILL</h4><p>Kill downed</p></div>
-                            <div class="optimizer-item"><i class="fas fa-dove"></i><h4>FLY HACK</h4><p>Fly & kill</p></div>
+                            <div class="optimizer-item"><i class="fas fa-check-circle"></i>
+                                <h4>AIMKILL</h4>
+                                <p>Kill with aim</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-bolt"></i>
+                                <h4>TELEKILL (10M)</h4>
+                                <p>Teleport kill</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-arrow-up"></i>
+                                <h4>UP PLAYER</h4>
+                                <p>Lift & kill</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-sync-alt"></i>
+                                <h4>AIM KILL 360°</h4>
+                                <p>Full circle kill</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-hand-sparkles"></i>
+                                <h4>SHAKE KILL v2</h4>
+                                <p>Shake & kill</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-bomb"></i>
+                                <h4>SPAWN KILL</h4>
+                                <p>Kill on spawn</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-arrow-down"></i>
+                                <h4>DOWN KILL</h4>
+                                <p>Kill downed</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-dove"></i>
+                                <h4>FLY HACK</h4>
+                                <p>Fly & kill</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pricing-cards reveal">
-                    <div class="pricing-card"><div class="pricing-duration">1 Day</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">3 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">7 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">30 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card featured"><div class="featured-badge">⭐ BEST VALUE</div><div class="pricing-duration">Lifetime</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">1 Day</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">3 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">7 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">30 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">⭐ BEST VALUE</div>
+                        <div class="pricing-duration">Lifetime</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -2594,27 +3507,79 @@
                         <div class="frame-glow"></div>
                         <img src="STREAMER.png" alt="Streamer" class="panel-overview">
                     </div>
-                    <div class="features-wrapper"><h3>Streamer Panel — Features</h3>
+                    <div class="features-wrapper">
+                        <h3>Streamer Panel — Features</h3>
                         <div class="optimizer-grid reveal" style="margin-bottom:0;gap:10px;">
-                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i><h4>Aimbot Visible</h4><p>See & aim</p></div>
-                            <div class="optimizer-item"><i class="fas fa-skull"></i><h4>Aimbot Rage</h4><p>Aggressive aim</p></div>
-                            <div class="optimizer-item"><i class="fas fa-fire"></i><h4>Glitch Fire</h4><p>Rapid fire</p></div>
-                            <div class="optimizer-item"><i class="fas fa-search"></i><h4>Sniper Scope</h4><p>Zoom aim</p></div>
-                            <div class="optimizer-item"><i class="fas fa-sync-alt"></i><h4>Sniper Switch</h4><p>Quick switch</p></div>
-                            <div class="optimizer-item"><i class="fas fa-shield-halved"></i><h4>100% Safe for Main ID</h4><p>Totally safe</p></div>
-                            <div class="optimizer-item"><i class="fas fa-eye-slash"></i><h4>Hide on Stream</h4><p>Streamer mode</p></div>
-                            <div class="optimizer-item"><i class="fas fa-satellite-dish"></i><h4>Remote Access</h4><p>Remote control</p></div>
-                            <div class="optimizer-item"><i class="fas fa-desktop"></i><h4>Website Control</h4><p>Web control</p></div>
-                            <div class="optimizer-item"><i class="fas fa-globe"></i><h4>Full Browser Control</h4><p>Browser access</p></div>
+                            <div class="optimizer-item"><i class="fas fa-crosshairs"></i>
+                                <h4>Aimbot Visible</h4>
+                                <p>See & aim</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-skull"></i>
+                                <h4>Aimbot Rage</h4>
+                                <p>Aggressive aim</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-fire"></i>
+                                <h4>Glitch Fire</h4>
+                                <p>Rapid fire</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-search"></i>
+                                <h4>Sniper Scope</h4>
+                                <p>Zoom aim</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-sync-alt"></i>
+                                <h4>Sniper Switch</h4>
+                                <p>Quick switch</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-shield-halved"></i>
+                                <h4>100% Safe for Main ID</h4>
+                                <p>Totally safe</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-eye-slash"></i>
+                                <h4>Hide on Stream</h4>
+                                <p>Streamer mode</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-satellite-dish"></i>
+                                <h4>Remote Access</h4>
+                                <p>Remote control</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-desktop"></i>
+                                <h4>Website Control</h4>
+                                <p>Web control</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-globe"></i>
+                                <h4>Full Browser Control</h4>
+                                <p>Browser access</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pricing-cards reveal">
-                    <div class="pricing-card"><div class="pricing-duration">1 Day</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">3 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">7 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card"><div class="pricing-duration">30 Days</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
-                    <div class="pricing-card featured"><div class="featured-badge">⭐ BEST VALUE</div><div class="pricing-duration">Lifetime</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">1 Day</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>80</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">3 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>200</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">7 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>400</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-duration">30 Days</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>800</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">⭐ BEST VALUE</div>
+                        <div class="pricing-duration">Lifetime</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>2499</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
                 </div>
             </div>
 
@@ -2625,25 +3590,47 @@
                         <div class="frame-glow"></div>
                         <img src="R4T PANEL BOT.png" alt="R4T" class="panel-overview">
                     </div>
-                    <div class="features-wrapper"><h3>R4T Android — Features</h3>
+                    <div class="features-wrapper">
+                        <h3>R4T Android — Features</h3>
                         <div class="optimizer-grid reveal" style="margin-bottom:0;gap:10px;">
-                            <div class="optimizer-item"><i class="fas fa-eye"></i><h4>Real-Time Monitoring</h4><p>Live monitor</p></div>
-                            <div class="optimizer-item"><i class="fas fa-bolt"></i><h4>Fast & Responsive</h4><p>Quick UI</p></div>
-                            <div class="optimizer-item"><i class="fas fa-tools"></i><h4>Comprehensive Management</h4><p>Full control</p></div>
-                            <div class="optimizer-item"><i class="fas fa-lock"></i><h4>Secure Connectivity</h4><p>Safe connection</p></div>
-                            <div class="optimizer-item"><i class="fas fa-th-large"></i><h4>Modern Dashboard</h4><p>Clean UI</p></div>
+                            <div class="optimizer-item"><i class="fas fa-eye"></i>
+                                <h4>Real-Time Monitoring</h4>
+                                <p>Live monitor</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-bolt"></i>
+                                <h4>Fast & Responsive</h4>
+                                <p>Quick UI</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-tools"></i>
+                                <h4>Comprehensive Management</h4>
+                                <p>Full control</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-lock"></i>
+                                <h4>Secure Connectivity</h4>
+                                <p>Safe connection</p>
+                            </div>
+                            <div class="optimizer-item"><i class="fas fa-th-large"></i>
+                                <h4>Modern Dashboard</h4>
+                                <p>Clean UI</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="pricing-cards reveal">
-                    <div class="pricing-card featured"><div class="featured-badge">⭐ BEST VALUE</div><div class="pricing-duration">Custom</div><div class="pricing-amount"><span class="pricing-rupee">₹</span>899</div><button class="pricing-buy" onclick="openQR()"><span>Buy</span></button></div>
+                    <div class="pricing-card featured">
+                        <div class="featured-badge">⭐ BEST VALUE</div>
+                        <div class="pricing-duration">Custom</div>
+                        <div class="pricing-amount"><span class="pricing-rupee">₹</span>899</div><button
+                            class="pricing-buy" onclick="openQR()"><span>Buy</span></button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ===== OPTIMIZER DETAIL ===== -->
-    <section id="optimizer" style="background:var(--bg);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);">
+    <section id="optimizer"
+        style="background:var(--bg);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-tag"><i class="fas fa-microchip"></i> Optimizer</span>
@@ -2651,19 +3638,41 @@
                 <p class="section-desc">All-in-one PC optimization suite for maximum gaming performance.</p>
             </div>
             <div class="optimizer-grid reveal">
-                <div class="optimizer-item"><i class="fas fa-shield-halved"></i><h4>Virus Remover</h4><p>Remove trojan & malware</p></div>
-                <div class="optimizer-item"><i class="fas fa-gamepad"></i><h4>Lag Fix</h4><p>Emulator & FPS boost</p></div>
-                <div class="optimizer-item"><i class="fas fa-broom"></i><h4>System Cleaner</h4><p>Temp, cache, DNS</p></div>
-                <div class="optimizer-item"><i class="fas fa-bolt"></i><h4>Full Optimization</h4><p>SFC, DISM tweaks</p></div>
-                <div class="optimizer-item"><i class="fas fa-desktop"></i><h4>Safe PC Cleaner</h4><p>Deep clean, no data loss</p></div>
-                <div class="optimizer-item"><i class="fas fa-scroll"></i><h4>Activity Log</h4><p>Real-time status</p></div>
-                <div class="optimizer-item"><i class="fas fa-circle-check"></i><h4>Admin Mode</h4><p>Full access</p></div>
+                <div class="optimizer-item"><i class="fas fa-shield-halved"></i>
+                    <h4>Virus Remover</h4>
+                    <p>Remove trojan & malware</p>
+                </div>
+                <div class="optimizer-item"><i class="fas fa-gamepad"></i>
+                    <h4>Lag Fix</h4>
+                    <p>Emulator & FPS boost</p>
+                </div>
+                <div class="optimizer-item"><i class="fas fa-broom"></i>
+                    <h4>System Cleaner</h4>
+                    <p>Temp, cache, DNS</p>
+                </div>
+                <div class="optimizer-item"><i class="fas fa-bolt"></i>
+                    <h4>Full Optimization</h4>
+                    <p>SFC, DISM tweaks</p>
+                </div>
+                <div class="optimizer-item"><i class="fas fa-desktop"></i>
+                    <h4>Safe PC Cleaner</h4>
+                    <p>Deep clean, no data loss</p>
+                </div>
+                <div class="optimizer-item"><i class="fas fa-scroll"></i>
+                    <h4>Activity Log</h4>
+                    <p>Real-time status</p>
+                </div>
+                <div class="optimizer-item"><i class="fas fa-circle-check"></i>
+                    <h4>Admin Mode</h4>
+                    <p>Full access</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ===== REVIEWS ===== -->
-    <section id="reviews" style="background:var(--bg2);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);">
+    <section id="reviews"
+        style="background:var(--bg2);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-tag"><i class="fas fa-star"></i> Testimonials</span>
@@ -2678,17 +3687,23 @@
             <div style="display:flex;justify-content:center;gap:30px;margin-top:40px;flex-wrap:wrap;">
                 <div class="review-rating-bar" style="min-width:180px;">
                     <span style="font-size:12px;color:var(--text2);">5 ★</span>
-                    <div class="bar-bg"><div class="bar-fill" style="width:95%;"></div></div>
+                    <div class="bar-bg">
+                        <div class="bar-fill" style="width:95%;"></div>
+                    </div>
                     <span class="bar-label">95%</span>
                 </div>
                 <div class="review-rating-bar" style="min-width:180px;">
                     <span style="font-size:12px;color:var(--text2);">4 ★</span>
-                    <div class="bar-bg"><div class="bar-fill" style="width:4%;"></div></div>
+                    <div class="bar-bg">
+                        <div class="bar-fill" style="width:4%;"></div>
+                    </div>
                     <span class="bar-label">4%</span>
                 </div>
                 <div class="review-rating-bar" style="min-width:180px;">
                     <span style="font-size:12px;color:var(--text2);">3 ★</span>
-                    <div class="bar-bg"><div class="bar-fill" style="width:1%;"></div></div>
+                    <div class="bar-bg">
+                        <div class="bar-fill" style="width:1%;"></div>
+                    </div>
                     <span class="bar-label">1%</span>
                 </div>
             </div>
@@ -2699,11 +3714,16 @@
     <section class="cta-section">
         <div class="container">
             <div class="cta-box reveal">
-                <h2>Ready to <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Dominate</span>?</h2>
-                <p>Join our Discord and contact <strong style="color:var(--accent);">Aman</strong> to purchase. Instant delivery, 24/7 support!</p>
+                <h2>Ready to <span
+                        style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Dominate</span>?
+                </h2>
+                <p>Join our Discord and contact <strong style="color:var(--accent);">Aman</strong> to purchase. Instant
+                    delivery, 24/7 support!</p>
                 <div class="cta-btns">
-                    <a href="https://discord.gg/HDEhrShHm2" target="_blank" class="btn-primary"><span class="shine"></span><i class="fab fa-discord"></i><span>Join Discord & Buy</span></a>
-                    <a href="https://www.youtube.com/@AXCONTOP" target="_blank" class="btn-secondary"><i class="fab fa-youtube"></i> Watch on YouTube</a>
+                    <a href="https://discord.gg/HDEhrShHm2" target="_blank" class="btn-primary"><span
+                            class="shine"></span><i class="fab fa-discord"></i><span>Join Discord & Buy</span></a>
+                    <a href="https://www.youtube.com/@AXCONTOP" target="_blank" class="btn-secondary"><i
+                            class="fab fa-youtube"></i> Watch on YouTube</a>
                 </div>
             </div>
         </div>
@@ -2745,7 +3765,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 AXC X CHEATS. All rights reserved. Contact <a href="https://discord.gg/HDEhrShHm2" target="_blank">Aman</a> on Discord.</p>
+            <p>© 2026 AXC X CHEATS. All rights reserved. Contact <a href="https://discord.gg/HDEhrShHm2"
+                    target="_blank">Aman</a> on Discord.</p>
         </div>
     </footer>
 
@@ -2754,7 +3775,7 @@
     </script>
     <script>
         // ===== 3D ENGINE — Premium =====
-        (function() {
+        (function () {
             const canvas = document.getElementById('three-canvas');
             const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
             renderer.setSize(window.innerWidth, window.innerHeight);
@@ -2937,7 +3958,7 @@
         })();
 
         // ===== HERO SHOWCASE 3D =====
-        (function() {
+        (function () {
             const canvas = document.getElementById('heroShowcase');
             if (!canvas) return;
             const rect = canvas.parentElement.getBoundingClientRect();
@@ -3182,7 +4203,7 @@
                     const label = el.parentElement.querySelector('.stat-label');
                     const suffix = label && label.textContent.includes('Uptime') ? '%' :
                         label && label.textContent.includes('Support') ? '/7' :
-                        label && label.textContent.includes('Detections') ? '' : '+';
+                            label && label.textContent.includes('Detections') ? '' : '+';
                     const timer = setInterval(() => {
                         current += increment;
                         if (current >= target) {
@@ -3225,40 +4246,243 @@
         }
 
         function copyUPI() {
-            const upiText = document.getElementById('upiId').textContent;
-            const copyBtn = document.getElementById('copyBtn');
-            const copyText = document.getElementById('copyText');
-            const copyIcon = copyBtn.querySelector('i');
-            navigator.clipboard.writeText(upiText).then(() => {
-                copyBtn.classList.add('copied');
-                copyIcon.className = 'fas fa-check';
-                copyText.textContent = 'Copied!';
-                setTimeout(() => {
-                    copyBtn.classList.remove('copied');
-                    copyIcon.className = 'fas fa-copy';
-                    copyText.textContent = 'Copy';
-                }, 2000);
-            }).catch(() => {
-                const temp = document.createElement('textarea');
-                temp.value = upiText;
-                document.body.appendChild(temp);
-                temp.select();
-                document.execCommand('copy');
-                document.body.removeChild(temp);
-                copyBtn.classList.add('copied');
-                copyIcon.className = 'fas fa-check';
-                copyText.textContent = 'Copied!';
-                setTimeout(() => {
-                    copyBtn.classList.remove('copied');
-                    copyIcon.className = 'fas fa-copy';
-                    copyText.textContent = 'Copy';
-                }, 2000);
-            });
+            var upiText = 'theamanjangir-1@oksbi';
+            var copyBtn = document.getElementById('copyBtn');
+            var copyText = document.getElementById('copyText');
+            var copyIcon = copyBtn ? copyBtn.querySelector('i') : null;
+
+            function markCopied() {
+                if (copyBtn) {
+                    copyBtn.classList.add('copied');
+                    if (copyIcon) copyIcon.className = 'fas fa-check';
+                    if (copyText) copyText.textContent = 'Copied!';
+                    setTimeout(function () {
+                        copyBtn.classList.remove('copied');
+                        if (copyIcon) copyIcon.className = 'fas fa-copy';
+                        if (copyText) copyText.textContent = 'Copy';
+                    }, 2000);
+                }
+                showToast('UPI ID copied successfully!', 'success');
+            }
+
+            function tryExecCopy(elem) {
+                try {
+                    elem.focus();
+                    if (elem.select) elem.select();
+                    if (elem.setSelectionRange) {
+                        try { elem.setSelectionRange(0, upiText.length); } catch (e) { }
+                    }
+                    if (window.getSelection) {
+                        try {
+                            var rng = document.createRange();
+                            rng.selectNodeContents(elem);
+                            var sel = window.getSelection();
+                            sel.removeAllRanges();
+                            sel.addRange(rng);
+                        } catch (e) { }
+                    }
+                    var ok = false;
+                    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+                    try {
+                        if (window.getSelection) {
+                            var s = window.getSelection();
+                            if (s && s.removeAllRanges) s.removeAllRanges();
+                        }
+                    } catch (e) { }
+                    return ok;
+                } catch (e) { return false; }
+            }
+
+            function tryHiddenInputSync() {
+                try {
+                    var h = document.getElementById('upiHiddenCopy');
+                    if (!h) return false;
+                    h.value = upiText;
+                    h.readOnly = false;
+                    h.disabled = false;
+                    return tryExecCopy(h);
+                } catch (e) { return false; }
+            }
+
+            function tryInputSync() {
+                try {
+                    var el = document.createElement('input');
+                    el.type = 'text';
+                    el.value = upiText;
+                    el.readOnly = false;
+                    el.style.position = 'fixed';
+                    el.style.top = '0';
+                    el.style.left = '0';
+                    el.style.opacity = '1';
+                    el.style.pointerEvents = 'auto';
+                    el.style.fontSize = '20px';
+                    el.style.padding = '0';
+                    el.style.margin = '0';
+                    el.style.border = '1px solid #000';
+                    el.style.outline = 'none';
+                    el.style.background = '#fff';
+                    el.style.color = '#000';
+                    el.style.zIndex = '2147483647';
+                    el.style.width = (upiText.length * 15) + 'px';
+                    el.style.height = '30px';
+                    el.setAttribute('readonly', 'readonly');
+                    document.body.appendChild(el);
+                    var ok = tryExecCopy(el);
+                    document.body.removeChild(el);
+                    return ok;
+                } catch (e) { return false; }
+            }
+
+            function tryTextareaSync() {
+                try {
+                    var el = document.createElement('textarea');
+                    el.value = upiText;
+                    el.style.position = 'fixed';
+                    el.style.top = '0';
+                    el.style.left = '0';
+                    el.style.opacity = '1';
+                    el.style.pointerEvents = 'auto';
+                    el.style.fontSize = '20px';
+                    el.style.padding = '0';
+                    el.style.margin = '0';
+                    el.style.border = '1px solid #000';
+                    el.style.outline = 'none';
+                    el.style.background = '#fff';
+                    el.style.color = '#000';
+                    el.style.zIndex = '2147483647';
+                    el.style.width = (upiText.length * 15) + 'px';
+                    el.style.height = '40px';
+                    el.rows = 1;
+                    el.cols = upiText.length;
+                    el.setAttribute('readonly', 'readonly');
+                    document.body.appendChild(el);
+                    var ok = tryExecCopy(el);
+                    document.body.removeChild(el);
+                    return ok;
+                } catch (e) { return false; }
+            }
+
+            function tryDivSync() {
+                try {
+                    var upiEl = document.getElementById('upiId');
+                    if (!upiEl) return false;
+                    var range = document.createRange();
+                    range.selectNodeContents(upiEl);
+                    var sel = window.getSelection();
+                    sel.removeAllRanges();
+                    sel.addRange(range);
+                    var ok = false;
+                    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+                    sel.removeAllRanges();
+                    return ok;
+                } catch (e) { return false; }
+            }
+
+            function tryWindowClipboardData() {
+                try {
+                    if (window.clipboardData && window.clipboardData.setData) {
+                        return !!window.clipboardData.setData('Text', upiText);
+                    }
+                } catch (e) { }
+                return false;
+            }
+
+            var ok = false;
+
+            ok = ok || tryWindowClipboardData();
+            ok = ok || tryHiddenInputSync();
+            ok = ok || tryInputSync();
+            ok = ok || tryTextareaSync();
+            ok = ok || tryDivSync();
+
+            if (ok) {
+                markCopied();
+                return;
+            }
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(upiText).then(markCopied).catch(function () {
+                    try {
+                        window.prompt('Press Ctrl+C to copy the UPI ID (already selected):', upiText);
+                        markCopied();
+                    } catch (e2) {
+                        showToast('Copy failed! UPI ID is: ' + upiText, 'error');
+                    }
+                });
+            } else {
+                try {
+                    window.prompt('Press Ctrl+C to copy the UPI ID (already selected):', upiText);
+                    markCopied();
+                } catch (e) {
+                    showToast('Copy failed! UPI ID is: ' + upiText, 'error');
+                }
+            }
         }
+
+        // Bind multiple event types at capture phase to guarantee copy fires
+        (function bindCopyEvents() {
+            function isCopyBtn(target) {
+                return target.closest && target.closest('#copyBtn, .copy-btn');
+            }
+            function handler(e) {
+                if (!isCopyBtn(e.target)) return;
+                e.preventDefault();
+                e.stopPropagation();
+                copyUPI();
+                return false;
+            }
+            var opts = { capture: true, passive: false };
+            document.addEventListener('click', handler, opts);
+            document.addEventListener('mousedown', function (e) {
+                if (!isCopyBtn(e.target)) return;
+                window.__copyIntent = true;
+                e.preventDefault();
+            }, opts);
+            document.addEventListener('mouseup', function (e) {
+                if (!isCopyBtn(e.target)) return;
+                if (window.__copyIntent) {
+                    window.__copyIntent = false;
+                    e.preventDefault();
+                    e.stopPropagation();
+                    copyUPI();
+                    return false;
+                }
+            }, opts);
+            document.addEventListener('pointerdown', function (e) {
+                if (!isCopyBtn(e.target)) return;
+                window.__copyIntent2 = true;
+            }, opts);
+            document.addEventListener('pointerup', function (e) {
+                if (!isCopyBtn(e.target)) return;
+                if (window.__copyIntent2) {
+                    window.__copyIntent2 = false;
+                    e.preventDefault();
+                    e.stopPropagation();
+                    copyUPI();
+                    return false;
+                }
+            }, opts);
+            document.addEventListener('touchend', function (e) {
+                if (!isCopyBtn(e.target)) return;
+                e.preventDefault();
+                e.stopPropagation();
+                copyUPI();
+                return false;
+            }, opts);
+            document.addEventListener('keydown', function (e) {
+                var btn = isCopyBtn(e.target);
+                if (btn && document.activeElement === btn && (e.key === 'Enter' || e.key === ' ' || e.keyCode === 13 || e.keyCode === 32)) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    copyUPI();
+                    return false;
+                }
+            }, opts);
+        })();
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -3267,7 +4491,7 @@
 
         // Ripple on buttons
         document.querySelectorAll('.buy-btn, .pricing-buy, .btn-primary').forEach(btn => {
-            btn.addEventListener('click', function(e) {
+            btn.addEventListener('click', function (e) {
                 const rect = this.getBoundingClientRect();
                 const x = e.clientX - rect.left,
                     y = e.clientY - rect.top;
@@ -3288,14 +4512,17 @@
         // Toast
         function showToast(msg, type = '') {
             const toast = document.getElementById('toast');
-            toast.innerHTML = '<i class="fas fa-circle-check"></i> ' + msg;
+            let icon = 'fa-circle-check';
+            if (type === 'error') icon = 'fa-circle-exclamation';
+            else if (type === 'warning') icon = 'fa-triangle-exclamation';
+            toast.innerHTML = '<i class="fas ' + icon + '"></i> ' + msg;
             toast.className = 'toast' + (type ? ' ' + type : '');
             toast.classList.add('show');
             setTimeout(() => toast.classList.remove('show'), 3500);
         }
 
         // Reviews carousel
-        (function() {
+        (function () {
             const track = document.getElementById('reviewsTrack');
             if (!track) return;
             const reviewsData = [{
@@ -3384,6 +4611,147 @@
             });
         });
 
+        // ============ SECURITY MEASURES ============
+
+        // 1. Right-Click Block (contextmenu)
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            showToast('Right-click is disabled for security reasons.', 'error');
+            return false;
+        });
+
+        // 2. Keyboard Shortcuts Block
+        document.addEventListener('keydown', function (e) {
+            const key = e.key;
+            const ctrl = e.ctrlKey || e.metaKey;
+            const shift = e.shiftKey;
+            const alt = e.altKey || e.metaKey;
+
+            // F12 — Inspect / DevTools
+            if (key === 'F12') {
+                e.preventDefault();
+                showToast('Developer tools are disabled.', 'error');
+                return false;
+            }
+
+            // Ctrl+U / Cmd+U — View Source
+            if (ctrl && (key === 'u' || key === 'U')) {
+                e.preventDefault();
+                showToast('View source is disabled.', 'error');
+                return false;
+            }
+
+            // Ctrl+Shift+I / Cmd+Option+I — Inspect Element
+            if (ctrl && shift && (key === 'i' || key === 'I')) {
+                e.preventDefault();
+                showToast('Developer tools are disabled.', 'error');
+                return false;
+            }
+
+            // Ctrl+Shift+J / Cmd+Option+J — Console
+            if (ctrl && shift && (key === 'j' || key === 'J')) {
+                e.preventDefault();
+                showToast('Console is disabled.', 'error');
+                return false;
+            }
+
+            // Ctrl+Shift+C — Node Inspector
+            if (ctrl && shift && (key === 'c' || key === 'C')) {
+                e.preventDefault();
+                showToast('Node inspector is disabled.', 'error');
+                return false;
+            }
+
+            // Ctrl+S — Save Webpage
+            if (ctrl && (key === 's' || key === 'S')) {
+                e.preventDefault();
+                showToast('Saving the webpage is disabled.', 'error');
+                return false;
+            }
+
+            // Ctrl+Shift+K — Firefox Console
+            if (ctrl && shift && (key === 'k' || key === 'K')) {
+                e.preventDefault();
+                showToast('Console is disabled.', 'error');
+                return false;
+            }
+        });
+
+        // 3. Dynamic Debugger Loop — DevTools Trap
+        (function () {
+            function debuggerTrap() {
+                function detect() {
+                    const startTime = performance.now();
+                    (function () { }).constructor('debugger')();
+                    const endTime = performance.now();
+                    if (endTime - startTime > 100) {
+                        return true;
+                    }
+                    return false;
+                }
+
+                setInterval(function () {
+                    if (detect()) {
+                        console.clear();
+                    }
+                    try {
+                        (function () {
+                            return new Function('debugger')();
+                        }());
+                    } catch (e) { }
+                }, 500);
+            }
+            debuggerTrap();
+        })();
+
+        // 4. Console Warning Banner — DevTools Open Warning
+        (function () {
+            let devToolsOpen = false;
+            const threshold = 160;
+
+            function checkDevTools() {
+                const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+                const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+                return widthThreshold || heightThreshold;
+            }
+
+            function showWarning() {
+                if (checkDevTools() && !devToolsOpen) {
+                    devToolsOpen = true;
+                    console.clear();
+                    console.log('%c⚠️  SECURITY WARNING', 'color: #ef4444; font-size: 60px; font-weight: bold; text-shadow: 0 0 20px #ef4444;');
+                    console.log('%c', 'padding: 20px;');
+                    console.log('%c🔒 Developer Console Detected!', 'color: #f59e0b; font-size: 24px; font-weight: bold;');
+                    console.log('%c', 'padding: 10px;');
+                    console.log('%c⚠️  This website is protected against inspection.', 'color: #ffffff; font-size: 16px; font-weight: bold;');
+                    console.log('%c❌ Copying, modifying, or extracting code is strictly prohibited.', 'color: #ffffff; font-size: 14px;');
+                    console.log('%c👮 All activities may be monitored and logged.', 'color: #ffffff; font-size: 14px;');
+                    console.log('%c', 'padding: 20px;');
+                    console.log('%c📢 If you find a vulnerability, please report it to our team.', 'color: #4f8cff; font-size: 14px; font-style: italic;');
+
+                    showToast('⚠️ Developer tools detected! Security measures active.', 'warning');
+                } else if (!checkDevTools() && devToolsOpen) {
+                    devToolsOpen = false;
+                }
+            }
+
+            setInterval(checkDevTools, 1000);
+
+            function triggerOnAction() {
+                try {
+                    const startTime = new Date();
+                    (function () { }).constructor('debugger')();
+                    const endTime = new Date();
+                    if (endTime - startTime > 100) {
+                        if (!devToolsOpen) showWarning();
+                        devToolsOpen = true;
+                        console.clear();
+                    }
+                } catch (e) { }
+            }
+            setInterval(triggerOnAction, 2000);
+        })();
+
         // Loader / welcome
         setTimeout(() => {
             showToast('🚀 Welcome to AXC X CHEATS!', 'success');
@@ -3393,4 +4761,5 @@
         console.log('💬 Join Discord: https://discord.gg/HDEhrShHm2');
     </script>
 </body>
+
 </html>
